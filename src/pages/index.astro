@@ -1,12 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SectionContainer from "../components/SectionContainer.astro";
+import Hero from "../sections/Hero.astro";
+
+export const prerender = true;
 ---
 
 <Layout>
-  <main>
-    <SectionContainer>
-      <h1>section 1</h1>
-    </SectionContainer>
-  </main>
+  <Hero />
 </Layout>

@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Footer from "../sections/Footer.astro";
+import Header from "../sections/Header.astro";
 ---
 
 <!doctype html>
@@ -11,13 +11,11 @@ import Header from "../components/Header.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>Robles Eventos</title>
   </head>
-  <body>
-    <div>
-      <Header />
-      <slot />
-      <Footer />
-    </div>
+  <body class="bg-primary w-screen overflow-x-hidden">
+    <Header />
+    <slot />
+    <Footer />
   </body>
 </html>
