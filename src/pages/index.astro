@@ -1,8 +1,15 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
+import FAQ from "../sections/FAQ.astro";
+import Hero from "../sections/Hero.astro";
+import Contact from "../sections/Contact.astro";
+
+export const prerender = true;
 ---
 
 <Layout>
-  <Welcome />
+  <Hero />
+  <Contact />
+
+  <!-- <FAQ /> -->
 </Layout>
