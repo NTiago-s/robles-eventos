@@ -25,3 +25,42 @@ export const FAQs = [
     p2: "Aceptamos Mercado Pago, Transferencia Bancaria y Criptomonedas.",
   },
 ];
+
+export const CONTACT = [
+  {
+    id: 1,
+    icon: "fab fa-facebook-f",
+    title: "Facebook",
+    description: "Conéctate por mi perfil personal",
+    txt: "Ir a Facebook",
+    href: "#",
+    color: "#0187e9",
+  },
+  {
+    id: 2,
+    icon: "fab fa-whatsapp",
+    title: "WhatsApp",
+    description: "Escríbeme directamente al chat",
+    txt: "Ir a WhatsApp",
+    href: "#",
+    color: "#009f31",
+  },
+  {
+    id: 3,
+    icon: "fab fa-instagram",
+    title: "Instagram",
+    description: "Sígueme y envíame un mensaje",
+    txt: "Ir a Instagram",
+    href: "#",
+    color: "#f8316a",
+  },
+  {
+    id: 4,
+    icon: "fas fa-envelope",
+    title: "Correo",
+    description: "Envíame un email en cualquier momento",
+    txt: "Enviar correo",
+    href: "#",
+    color: "#000",
+  },
+];
