@@ -1,9 +1,44 @@
-<header class="flex w-full p-4 bg-gray-300">
-  <nav class="flex w-full">
-    <ul class="flex w-full justify-end gap-6">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<header class="flex w-full sticky top-0">
+  <nav
+    class="flex w-full justify-between items-center max-w-4xl mx-auto p-4 sm:px-0"
+  >
+    <a href="/">
+      <img
+        src="/logo-robles.jpeg"
+        alt="Logo Los Robles"
+        class="rounded-full size-14"
+      /></a
+    >
+    <div class="flex items-center gap-4">
+      <a class="minimal-hover" href="/">Inicio</a>
+      <a class="minimal-hover" href="/galeria">Galería</a>
+      <a class="minimal-hover" href="/#faq">Preguntas Frecuentes</a>
+      <a class="minimal-hover" href="/#contacto">Contacto</a>
+    </div>
   </nav>
 </header>
+
+<style>
+  .minimal-hover {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px 2px;
+  }
+
+  .minimal-hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 0%;
+    background-color: #fff;
+    transition: width 0.3s ease;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .minimal-hover:hover::after {
+    width: 100%;
+  }
+</style>

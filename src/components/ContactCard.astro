@@ -1,0 +1,106 @@
+---
+const { title, description, txt, href, icon, color } = Astro.props;
+
+console.log(color);
+---
+
+<div class="card">
+  <div
+    id="iconContainer"
+    data-color={color}
+    class="size-12 rounded-md flex items-center justify-center aspect-square"
+  >
+    <i class={`${icon} text-4xl text-white`}></i>
+  </div>
+  <div class="w-full flex flex-col items-center gap-2">
+    <h3 class="text-2xl mb-2 text-balance text-center w-full">{title}</h3>
+    <p class="opacity-80 mb-2 text-balance text-center w-full">{description}</p>
+    <a
+      id="linkItem"
+      data-color={color}
+      class={`inline-block font-semibold border w-fit px-4 py-2 rounded-md transition-all`}
+      href={href}
+      target="_blank">{txt}</a
+    >
+  </div>
+</div>
+
+<style>
+  .card {
+    border-radius: 12px;
+    color: #111;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (min-width: 768px) {
+    .contact-cards {
+      flex-direction: column;
+    }
+
+    .card {
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .card i {
+      margin: 0 0 16px 0;
+    }
+  }
+</style>
+
+<script>
+  const links = document.querySelectorAll("#linkItem");
+  const icons = document.querySelectorAll("#iconContainer");
+
+  links.forEach((link: any) => {
+    const originalColor = getComputedStyle(link).color;
+    const originalBg = getComputedStyle(link).backgroundColor;
+    const hoverColor = link.dataset.color;
+
+    if (hoverColor != "#f8316a") {
+      link.addEventListener("mouseenter", () => {
+        link.style.backgroundColor = hoverColor;
+        link.style.color = "#fff";
+      });
+    } else {
+      link.addEventListener("mouseenter", () => {
+        link.style.background = `linear-gradient(60deg,${hoverColor}, #b22aac)`;
+        link.style.color = "#fff";
+      });
+    }
+
+    link.addEventListener("mouseleave", () => {
+      link.style.background = originalBg;
+      link.style.color = originalColor;
+    });
+  });
+
+  icons.forEach((icon: any) => {
+    const bgColor = icon.dataset.color;
+
+    if (bgColor != "#f8316a") {
+      icon.style.background = bgColor;
+    } else {
+      icon.style.background = `linear-gradient(60deg,${bgColor}, #b22aac)`;
+    }
+  });
+</script>
