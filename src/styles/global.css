@@ -1,1 +1,11 @@
-@import "tailwindcss";  
+@import "tailwindcss";
+
+:root {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(74% 0.238 322.16) #171717;
+}
+html,
+body {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
