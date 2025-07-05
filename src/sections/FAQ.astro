@@ -1,0 +1,27 @@
+---
+import SectionContainer from "../components/SectionContainer.astro";
+import { FAQs } from "../utils/constans.ts";
+---
+
+<SectionContainer>
+  <h2>Preguntas Frecuentes</h2>
+  <article class="grid grid-cols-2 gap-4 my-4">
+    {
+      FAQs.map(({ id, question, p1, p2 }) => (
+        <details class="border-2 border-secondary rounded-xl hover:bg-black/30 transition w-full lg:max-w-sm duration-300 cursor-pointer">
+          <summary class="text-primary-txt text-sm sm:text-base marker:text-xs px-4 py-2">
+            {question}
+          </summary>
+          <p class="text-xs sm:text-sm text-secondary-txt px-4 pb-4 my-2">
+            {p1}
+          </p>
+          {p2 && (
+            <p class="text-xs sm:text-sm text-secondary-txt px-4 pb-4 my-2">
+              {p2}
+            </p>
+          )}
+        </details>
+      ))
+    }
+  </article>
+</SectionContainer>
