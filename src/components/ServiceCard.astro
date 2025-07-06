@@ -1,0 +1,14 @@
+---
+const { id, title, icon } = Astro.props;
+---
+
+<article
+  class="px-4 py-2 flex [flex:1_1_170px] items-center gap-2 bg-indigo-900/50 rounded-md"
+  id={id}
+>
+  <span class="size-9 flex items-center rounded justify-center bg-fuchsia-900"
+    ><i class={icon}></i></span
+  ><h3 class="font-normal text-nowrap text-sm sm:text-base">
+    {title}
+  </h3>
+</article>
