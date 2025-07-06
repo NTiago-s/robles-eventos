@@ -1,0 +1,32 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { events, slugify } from "../../../utils/events";
+import ReturnArrow from "../../../../public/icons/return-arrow.svg";
+
+export function getStaticPaths() {
+  return events.map((event) => ({
+    params: { slug: slugify(event.title) },
+  }));
+}
+
+const { slug } = Astro.params;
+
+const event = events.find((e) => slugify(e.title) === slug);
+
+if (!event) {
+  throw new Error(`Evento no encontrado con slug: ${slug}`);
+}
+---
+
+<Layout>
+  <section class="max-w-4xl mx-auto py-10">
+    <a
+      href="/eventos"
+      class="flex gap-2 items-center hover:underline text-base my-4"
+      ><ReturnArrow /> Volver a la Galeria
+    </a>
+    <h1 class="text-4xl font-bold mb-4">{event.title}</h1>
+    <img class="w-full rounded-lg mb-6" src={event.image} alt={event.title} />
+    <p class="text-base text-white/60">{event.description}</p>
+  </section>
+</Layout>
