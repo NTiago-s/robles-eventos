@@ -2,6 +2,7 @@
 import Layout from "../../../layouts/Layout.astro";
 import { events, slugify } from "../../../utils/events";
 import ReturnArrow from "../../../../public/icons/return-arrow.svg";
+import SectionContainer from "../../../components/SectionContainer.astro";
 
 export function getStaticPaths() {
   return events.map((event) => ({
@@ -19,7 +20,7 @@ if (!event) {
 ---
 
 <Layout>
-  <section class="max-w-4xl mx-auto py-10">
+  <SectionContainer>
     <a
       href="/eventos"
       class="flex gap-2 items-center hover:underline text-base my-4"
@@ -28,5 +29,5 @@ if (!event) {
     <h1 class="text-4xl font-bold mb-4">{event.title}</h1>
     <img class="w-full rounded-lg mb-6" src={event.image} alt={event.title} />
     <p class="text-base text-white/60">{event.description}</p>
-  </section>
+  </SectionContainer>
 </Layout>
