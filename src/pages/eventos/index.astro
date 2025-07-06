@@ -107,6 +107,12 @@ const groupedEvents = events.reduce(
         });
       }
 
+      if (mobileInput) {
+        mobileInput.addEventListener("input", (e) => {
+          filterEvents(e.target.value);
+        });
+      }
+
       if (mobileButton && mobileInput) {
         mobileButton.addEventListener("click", () => {
           filterEvents(mobileInput.value);
