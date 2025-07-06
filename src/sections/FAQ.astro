@@ -1,14 +1,22 @@
 ---
 import SectionContainer from "../components/SectionContainer.astro";
+import Title from "../components/Title.astro";
 import { FAQs } from "../utils/constans.js";
 ---
 
-<SectionContainer id="faq">
-  <h2>Preguntas Frecuentes</h2>
-  <article class="grid grid-cols-2 gap-4 my-4">
+<SectionContainer
+  id="faq"
+  style="background:linear-gradient(#000,#0009), url(https://scontent.fbhi10-1.fna.fbcdn.net/v/t39.30808-6/492487921_1292410719229385_525871595238232187_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lFHuTQdcM7gQ7kNvwFJ7Vs7&_nc_oc=Adlqib9VQkjeXMMQAsqaH8n-8mm2nIwLMWnkQGkvrdDhcTT4NALf2LGm1b63lxS_neg&_nc_zt=23&_nc_ht=scontent.fbhi10-1.fna&_nc_gid=SrC-FQNXMcJuCQpc8UM9ZQ&oh=00_AfQLBilSDknsdDgD2b7jfhVqhn4nQzrFXy3b_fdG3wi2sw&oe=686F735B); padding-block: 12px; background-position: center; background-size: cover;"
+>
+  <Title>Preguntas frecuentes</Title>
+
+  <article class="sm:columns-2 w-full gap-4 my-4">
     {
       FAQs.map(({ id, question, p1, p2 }) => (
-        <details class="border-2 border-secondary rounded-xl hover:bg-black/30 transition w-full lg:max-w-sm duration-300 cursor-pointer">
+        <details
+          class="faq-item border-2 break-inside-avoid min-h-16 h-full mb-4 border-secondary rounded-xl hover:bg-black/30 transition w-full duration-300 cursor-pointer"
+          data-id={id}
+        >
           <summary class="text-primary-txt text-sm sm:text-base marker:text-xs px-4 py-2">
             {question}
           </summary>
@@ -24,4 +32,30 @@ import { FAQs } from "../utils/constans.js";
       ))
     }
   </article>
+
+  <style>
+    p {
+      opacity: 0.8;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const isOpen = item.hasAttribute("open");
+
+          faqItems.forEach((el) => el.removeAttribute("open"));
+
+          if (!isOpen) {
+            item.setAttribute("open", "");
+          }
+        });
+      });
+    });
+  </script>
 </SectionContainer>

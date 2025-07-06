@@ -29,21 +29,21 @@ export const FAQs = [
 export const CONTACT = [
   {
     id: 1,
+    icon: "fab fa-whatsapp",
+    title: "WhatsApp",
+    description: "Escríbeme al WhatsApp",
+    txt: "Ir a WhatsApp",
+    href: "#",
+    color: "#009f31",
+  },
+  {
+    id: 2,
     icon: "fab fa-facebook-f",
     title: "Facebook",
     description: "Conéctate por mi perfil personal",
     txt: "Ir a Facebook",
     href: "#",
     color: "#0187e9",
-  },
-  {
-    id: 2,
-    icon: "fab fa-whatsapp",
-    title: "WhatsApp",
-    description: "Escríbeme directamente al chat",
-    txt: "Ir a WhatsApp",
-    href: "#",
-    color: "#009f31",
   },
   {
     id: 3,
@@ -58,9 +58,37 @@ export const CONTACT = [
     id: 4,
     icon: "fas fa-envelope",
     title: "Correo",
-    description: "Envíame un email en cualquier momento",
+    description: "Envíame un email",
     txt: "Enviar correo",
     href: "#",
     color: "#000",
+  },
+];
+
+export const NAV_OPTIONS = [
+  {
+    id: 1,
+    title: "Inicio",
+    href: "/",
+  },
+  {
+    id: 2,
+    title: "Eventos",
+    href: "/eventos",
+  },
+  {
+    id: 3,
+    title: "Servicios",
+    href: "/#servicios",
+  },
+  {
+    id: 4,
+    title: "Preguntas Frecuentes",
+    href: "/#faq",
+  },
+  {
+    id: 5,
+    title: "Contacto",
+    href: "/#contacto",
   },
 ];

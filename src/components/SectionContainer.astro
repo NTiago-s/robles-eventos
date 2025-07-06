@@ -1,9 +1,9 @@
 ---
-const { id, className } = Astro.props;
+const { id, className, img } = Astro.props;
 ---
 
-<section id={id} class="px-4 sm:px-0 my-32">
-  <div class={` ${className} my-12 max-w-4xl w-full mx-auto`}>
+<section id={id} {...Astro.props} class="px-4 sm:px-0">
+  <div class={` ${className} my-12 max-w-4xl w-full sm:my-32 mx-auto`}>
     <slot />
   </div>
 </section>
