@@ -28,8 +28,8 @@ const groupedEvents = events.reduce(
       Galería de Eventos
     </h2>
 
-    <!-- 📱 Mobile Search Bar -->
-    <div class="sm:hidden flex gap-2 mb-10">
+    <!-- 📱 Mobile Search Bar (solo visible en mobile) -->
+    <form id="mobileSearchForm" class="sm:hidden flex gap-2 mb-10">
       <input
         id="mobileSearchInput"
         type="text"
@@ -37,15 +37,15 @@ const groupedEvents = events.reduce(
         class="border px-4 py-2 w-full rounded"
       />
       <button
-        id="mobileSearchButton"
+        type="submit"
         class="bg-blue-600 text-white px-4 py-2 rounded"
         aria-label="Buscar"
       >
         🔍
       </button>
-    </div>
+    </form>
 
-    <!-- 🖥️ Desktop Search Bar -->
+    <!-- 🖥️ Desktop Search Bar (solo visible en sm+) -->
     <input
       id="desktopSearchInput"
       type="text"
@@ -80,7 +80,7 @@ const groupedEvents = events.reduce(
     <script>
       const desktopInput = document.getElementById("desktopSearchInput");
       const mobileInput = document.getElementById("mobileSearchInput");
-      const mobileButton = document.getElementById("mobileSearchButton");
+      const mobileForm = document.getElementById("mobileSearchForm");
       const cards = document.querySelectorAll(".event-card");
 
       function filterEvents(query) {
@@ -107,15 +107,16 @@ const groupedEvents = events.reduce(
         });
       }
 
-      if (mobileInput) {
+      if (mobileForm && mobileInput) {
+        // Al enviar con botón o con Enter del teclado
+        mobileForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          filterEvents(mobileInput.value);
+        });
+
+        // Al escribir en tiempo real
         mobileInput.addEventListener("input", (e) => {
           filterEvents(e.target.value);
-        });
-      }
-
-      if (mobileButton && mobileInput) {
-        mobileButton.addEventListener("click", () => {
-          filterEvents(mobileInput.value);
         });
       }
     </script>
