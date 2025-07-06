@@ -3,6 +3,56 @@ const { title, description, txt, href, icon, color } = Astro.props;
 ---
 
 <div
+  class="rounded-md bg-white/5 flex items-center shadow-2xl shadow-indigo-900/10 justify-center p-4 sm:p-6 transition-all duration-300 ease hover:-translate-y-1 w-full flex-col sm:flex-row relative overflow-hidden"
+>
+  <i
+    class={`${icon} absolute left-0 sm:left-6 sm:bottom-0 scale-150 rotate-12 text-5xl sm:text-[77px] opacity-5 text-white`}
+  ></i>
+  <div class="w-full flex flex-col h-full justify-between items-center gap-2">
+    <h3 class="text-xl sm:text-2xl text-balance text-center w-full">
+      {title}
+    </h3>
+    <p
+      class="opacity-80 text-sm sm:text-base sm:max-w-28 md:max-w-full mb-2 text-balance text-center w-full"
+    >
+      {description}
+    </p>
+    <a
+      id="linkItem"
+      data-color={color}
+      class={`inline-block font-semibold border w-fit px-2 py-1 sm:px-4 sm:py-2 rounded transition-all text-balance`}
+      href={href}
+      rel="noopener noreferrer nofollow"
+      aria-label={txt}
+      target="_blank">{txt}</a
+    >
+  </div>
+</div>
+
+<script>
+  const links = document.querySelectorAll("#linkItem");
+
+  links.forEach((link: any) => {
+    const originalBg = getComputedStyle(link).backgroundColor;
+    const hoverColor = link.dataset.color;
+
+    if (hoverColor != "#f8316a") {
+      link.addEventListener("mouseenter", () => {
+        link.style.backgroundColor = hoverColor;
+      });
+    } else {
+      link.addEventListener("mouseenter", () => {
+        link.style.background = `linear-gradient(60deg,${hoverColor}, #b22aac)`;
+      });
+    }
+
+    link.addEventListener("mouseleave", () => {
+      link.style.background = originalBg;
+    });
+  });
+</script>
+
+<!-- <div
   class="rounded-md bg-white/5 flex items-center shadow-2xl shadow-indigo-900/10 justify-center p-6 transition-all duration-300 ease hover:-translate-y-1 flex-col sm:flex-row"
 >
   <div
@@ -69,4 +119,4 @@ const { title, description, txt, href, icon, color } = Astro.props;
       icon.style.background = `linear-gradient(60deg,${bgColor}, #b22aac)`;
     }
   });
-</script>
+</script> -->

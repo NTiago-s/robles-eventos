@@ -22,6 +22,45 @@ export const FAQs = [
   },
 ];
 
+export const SERVICES = [
+  {
+    id: 1,
+    icon: "fa-solid fa-building",
+    title: "Evento Empresarial",
+  },
+  {
+    id: 2,
+    icon: "fa-solid fa-wine-glass",
+    title: "Barra Móvil",
+  },
+  {
+    id: 3,
+    icon: "fa-solid fa-users",
+    title: "Cátering",
+  },
+  {
+    id: 4,
+    icon: "fa-solid fa-palette",
+    title: "Ambientaciones",
+  },
+  {
+    id: 5,
+    icon: "fa-solid fa-cake-candles",
+    title: "Mesa Dulce",
+  },
+  {
+    id: 6,
+    icon: "fa-solid fa-spoon",
+    title: "Vajilla Mantelería",
+  },
+
+  {
+    id: 7,
+    icon: "fa-solid fa-calendar",
+    title: "Organización de eventos",
+  },
+];
+
 export const CONTACT = [
   {
     id: 1,
@@ -29,7 +68,7 @@ export const CONTACT = [
     title: "WhatsApp",
     description: "Escríbeme al WhatsApp",
     txt: "Ir a WhatsApp",
-    href: "#",
+    href: "https://wa.me/2926515258",
     color: "#009f31",
   },
   {
@@ -38,7 +77,7 @@ export const CONTACT = [
     title: "Facebook",
     description: "Conéctate por mi perfil personal",
     txt: "Ir a Facebook",
-    href: "#",
+    href: "https://www.facebook.com/share/p/1DwYhkViFS/",
     color: "#0187e9",
   },
   {
@@ -47,7 +86,7 @@ export const CONTACT = [
     title: "Instagram",
     description: "Sígueme y envíame un mensaje",
     txt: "Ir a Instagram",
-    href: "#",
+    href: "https://www.instagram.com/losrobles.eventos?igsh=MTNxc3BlcjdsNTZqOA==",
     color: "#f8316a",
   },
   {
@@ -56,7 +95,7 @@ export const CONTACT = [
     title: "Correo",
     description: "Envíame un email",
     txt: "Enviar correo",
-    href: "#",
+    href: "mailto:#",
     color: "#000",
   },
 ];

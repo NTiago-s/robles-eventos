@@ -1,6 +1,8 @@
 ---
 import SectionContainer from "../components/SectionContainer.astro";
 import Title from "../components/Title.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import { SERVICES } from "../utils/constans";
 ---
 
 <SectionContainer
@@ -8,6 +10,9 @@ import Title from "../components/Title.astro";
   style="background:linear-gradient(#000,#0009), url(https://scontent.fbhi10-1.fna.fbcdn.net/v/t39.30808-6/493316495_1292410682562722_4201238380158360126_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Zz-5HI-13sgQ7kNvwEAuPMv&_nc_oc=Adl4fIpLHkw3CbYfikNZqimADUTIhfsmGzXTbeMaVqskZ5-F75hEN_pQH_j2ncLYvbM&_nc_zt=23&_nc_ht=scontent.fbhi10-1.fna&_nc_gid=w4Tp7E9WMv5tSR0Tiz-MJQ&oh=00_AfTHGo2BWkSq2Bs6Qj4Bo9WXK-hHXNzBF2tptFBm44HUsQ&oe=68701612); background-position: center; background-size: cover;"
 >
   <Title>Servicios</Title>
+  <div class="flex flex-wrap w-full gap-4">
+    {SERVICES.map((service) => <ServiceCard {...service} />)}
+  </div>
 </SectionContainer>
 
 <style>
