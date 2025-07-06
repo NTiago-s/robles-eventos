@@ -1,9 +1,19 @@
 ---
-const { id, className, img } = Astro.props;
+const { id, className, classNameSection } = Astro.props;
 ---
 
-<section id={id} {...Astro.props} class="px-4 sm:px-0">
-  <div class={` ${className} my-12 max-w-4xl w-full sm:my-32 mx-auto`}>
+<section id={id} {...Astro.props} class={classNameSection}>
+  <div
+    class={` ${className} max-w-4xl w-full mx-auto min-h-screen px-4 sm:px-0 flex flex-col items-center justify-center`}
+  >
     <slot />
   </div>
 </section>
+
+<!-- <section id={id} {...Astro.props} class="px-4 sm:px-0">
+  <div
+    class={` ${className} my-12 max-w-4xl w-full sm:my-32 mx-auto min-h-screen grid place-content-center`}
+  >
+    <slot />
+  </div>
+</section> -->

@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Footer from "../sections/Footer.astro";
 import Header from "../sections/Header.astro";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -12,6 +13,7 @@ import Header from "../sections/Header.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Robles Eventos</title>
+    <ClientRouter />
   </head>
   <body>
     <div class="fixed -z-50 h-screen w-full bg-neutral-900">
@@ -22,6 +24,5 @@ import Header from "../sections/Header.astro";
     </div>
     <Header />
     <slot />
-    <Footer />
   </body>
 </html>
