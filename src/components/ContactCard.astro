@@ -26,6 +26,7 @@ const { title, description, txt, href, icon, color } = Astro.props;
       data-color={color}
       class={`inline-block font-semibold border w-fit px-4 py-2 rounded transition-all`}
       href={href}
+      rel="noopener noreferrer nofollow"
       aria-label={txt}
       target="_blank">{txt}</a
     >

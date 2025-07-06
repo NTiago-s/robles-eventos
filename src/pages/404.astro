@@ -1,0 +1,26 @@
+---
+import SectionContainer from "../components/SectionContainer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <SectionContainer className="text-center text-white">
+    <h1 class="text-7xl sm:text-8xl font-bold tracking-wide text-fuchsia-400">
+      404
+    </h1>
+    <h2 class="text-2xl sm:text-3xl font-light tracking-wide">
+      Página no encontrada
+    </h2>
+    <p class="max-w-md text-lg sm:text-xl text-neutral-400">
+      Lo sentimos, la página que estás buscando no existe o fue movida.<br />
+      Si querés volver a conocer nuestros servicios, podés regresar al inicio.
+    </p>
+    <a
+      href="/"
+      aria-label="Volver al inicio"
+      class="mt-6 px-4 py-2 rounded-full bg-fuchsia-400 hover:bg-fuchsia-500 transition text-white font-medium"
+    >
+      Volver al inicio
+    </a>
+  </SectionContainer>
+</Layout>
