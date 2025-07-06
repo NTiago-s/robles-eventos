@@ -72,7 +72,7 @@ const groupedEvents = events.reduce(
           const query = (e.target as HTMLInputElement).value.toLowerCase();
 
           cards.forEach((card) => {
-            const title = card.dataset.title || "";
+            const title = (card.dataset.title || "").toLowerCase();
             card.style.display = title.includes(query) ? "block" : "none";
           });
 
