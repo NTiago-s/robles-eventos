@@ -84,11 +84,12 @@ const groupedEvents = events.reduce(
       const cards = document.querySelectorAll(".event-card");
 
       function filterEvents(query) {
-        const lowerQuery = query.toLowerCase();
+        const lowerQuery = query.toLowerCase().trim();
 
         cards.forEach((card) => {
           const title = (card.dataset.title || "").toLowerCase();
-          card.style.display = title.includes(lowerQuery) ? "block" : "none";
+          const match = !lowerQuery || title.includes(lowerQuery);
+          card.style.display = match ? "block" : "none";
         });
 
         const sections = document.querySelectorAll("#eventsGrid > section");
