@@ -20,14 +20,120 @@ if (!event) {
 ---
 
 <Layout>
-  <SectionContainer>
+  <SectionContainer class="py-24">
     <a
       href="/eventos"
       class="flex gap-2 items-center hover:underline text-base my-4"
-      ><ReturnArrow /> Volver a la Galeria
+    >
+      <ReturnArrow /> Volver a la Galería
     </a>
+
     <h1 class="text-4xl font-bold mb-4">{event.title}</h1>
+
     <img class="w-full rounded-lg mb-6" src={event.image} alt={event.title} />
-    <p class="text-base text-white/60">{event.description}</p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      {
+        event.images?.map((img, index) => (
+          <img
+            class="w-full rounded-lg cursor-pointer hover:opacity-80 transition"
+            src={img}
+            alt={`Imagen ${index + 1}`}
+            data-index={index}
+            onclick="openModal(event)"
+          />
+        ))
+      }
+    </div>
+
+    <p class="text-base text-white/60 mt-8">{event.description}</p>
+
+    <div
+      id="image-modal"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80"
+    >
+      <button
+        id="modal-close"
+        class="absolute top-4 right-6 text-white text-3xl font-bold"
+        aria-label="Cerrar"
+      >
+        &times;
+      </button>
+
+      <button
+        id="modal-prev"
+        class="absolute left-4 text-white text-4xl font-bold"
+        aria-label="Anterior"
+      >
+        &#10094;
+      </button>
+
+      <img
+        id="modal-img"
+        class="max-h-[80vh] max-w-[90vw] rounded-lg"
+        src=""
+        alt="Imagen ampliada"
+      />
+
+      <button
+        id="modal-next"
+        class="absolute right-4 text-white text-4xl font-bold"
+        aria-label="Siguiente"
+      >
+        &#10095;
+      </button>
+    </div>
+
+    <script is:inline>
+      document.addEventListener("astro:page-load", () => {
+        const images = Array.from(
+          document.querySelectorAll("[data-index]")
+        ).map((img) => img.src);
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("modal-img");
+        const closeBtn = document.getElementById("modal-close");
+        const nextBtn = document.getElementById("modal-next");
+        const prevBtn = document.getElementById("modal-prev");
+
+        let currentIndex = 0;
+
+        window.openModal = function (e) {
+          currentIndex = parseInt(e.target.getAttribute("data-index"));
+          modalImg.src = images[currentIndex];
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+        };
+
+        function closeModal() {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+        }
+
+        function showNext() {
+          currentIndex = (currentIndex + 1) % images.length;
+          modalImg.src = images[currentIndex];
+        }
+
+        function showPrev() {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          modalImg.src = images[currentIndex];
+        }
+
+        closeBtn.addEventListener("click", closeModal);
+        nextBtn.addEventListener("click", showNext);
+        prevBtn.addEventListener("click", showPrev);
+
+        window.addEventListener("keydown", (e) => {
+          if (modal.classList.contains("hidden")) return;
+          if (e.key === "ArrowRight") showNext();
+          if (e.key === "ArrowLeft") showPrev();
+          if (e.key === "Escape") closeModal();
+        });
+
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) closeModal();
+        });
+      });
+    </script>
   </SectionContainer>
 </Layout>

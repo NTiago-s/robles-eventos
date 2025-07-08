@@ -2,7 +2,6 @@
 import SectionContainer from "../../components/SectionContainer.astro";
 import Layout from "../../layouts/Layout.astro";
 import { events } from "../../utils/events";
-
 const slugify = (str: string): string =>
   str
     .toLowerCase()
@@ -26,7 +25,7 @@ const groupedEvents = events.reduce(
   title="Galería de Eventos"
   description="Explorá nuestra galería de eventos: fotos de cumpleaños de 15, bodas, aniversarios y celebraciones organizadas por Los Robles."
 >
-  <SectionContainer id="galeria">
+  <SectionContainer id="galeria" class="py-24">
     <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">
       Galeria de Eventos
     </h2>
@@ -34,7 +33,7 @@ const groupedEvents = events.reduce(
     <input
       id="searchInput"
       type="text"
-      placeholder="Buscar evento por nombre..."
+      placeholder="Buscar por nombre, tipo o fecha..."
       class="border px-4 py-2 w-full rounded mb-10"
     />
 
@@ -45,7 +44,12 @@ const groupedEvents = events.reduce(
             <h3 class="text-2xl font-bold mb-6 underline">{type}</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {events.map((event) => (
-                <div class="event-card" data-title={event.title.toLowerCase()}>
+                <div
+                  class="event-card"
+                  data-title={event.title.toLowerCase()}
+                  data-type={event.type.toLowerCase()}
+                  data-date={event.date}
+                >
                   <a href={`/eventos/${slugify(event.title)}`}>
                     <img
                       src={event.image}
@@ -61,35 +65,101 @@ const groupedEvents = events.reduce(
         ))
       }
     </div>
-
     <script>
-      const input = document.getElementById(
-        "searchInput"
-      ) as HTMLInputElement | null;
-      const cards = document.querySelectorAll(
-        ".event-card"
-      ) as NodeListOf<HTMLElement>;
+      document.addEventListener("astro:page-load", () => {
+        function normalizeText(text: string): string {
+          return text
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .trim();
+        }
 
-      if (input) {
-        input.addEventListener("input", (e) => {
-          const query = (e.target as HTMLInputElement).value.toLowerCase();
+        function parseDateFormats(dateStr: string): string[] {
+          const date = new Date(dateStr);
+          const monthNames = [
+            "enero",
+            "febrero",
+            "marzo",
+            "abril",
+            "mayo",
+            "junio",
+            "julio",
+            "agosto",
+            "septiembre",
+            "octubre",
+            "noviembre",
+            "diciembre",
+          ];
 
-          cards.forEach((card) => {
-            const title = (card.dataset.title || "").toLowerCase();
-            card.style.display = title.includes(query) ? "block" : "none";
+          if (isNaN(date.getTime())) return [];
+
+          const day = date.getDate().toString().padStart(2, "0");
+          const monthNum = (date.getMonth() + 1).toString().padStart(2, "0");
+          const year = date.getFullYear();
+          const monthName = monthNames[date.getMonth()];
+
+          return [
+            `${day}-${monthNum}-${year}`,
+            `${day}/${monthNum}/${year}`,
+            `${year}-${monthNum}-${day}`,
+            `${year}/${monthNum}/${day}`,
+            `${day} ${monthName} ${year}`,
+            `${day} de ${monthName} de ${year}`,
+            monthName,
+          ];
+        }
+
+        function matchCard(card: HTMLElement, query: string): boolean {
+          const title = normalizeText(card.dataset.title || "");
+          const type = normalizeText(card.dataset.type || "");
+          const dateRaw = card.dataset.date || "";
+          const formats = parseDateFormats(dateRaw);
+          const queryNorm = normalizeText(query);
+
+          return (
+            title.includes(queryNorm) ||
+            type.includes(queryNorm) ||
+            formats.some((f) => f.includes(queryNorm))
+          );
+        }
+
+        function attachSearchInput() {
+          const input = document.getElementById(
+            "searchInput"
+          ) as HTMLInputElement | null;
+          const cards = document.querySelectorAll(".event-card");
+
+          if (!input) return;
+
+          input.addEventListener("input", (e) => {
+            const query = (e.target as HTMLInputElement).value;
+
+            cards.forEach((card) => {
+              const isVisible = matchCard(card as HTMLElement, query);
+              (card as HTMLElement).style.display = isVisible
+                ? "block"
+                : "none";
+            });
+
+            const sections = document.querySelectorAll("#eventsGrid > section");
+            sections.forEach((section) => {
+              const visibleCards = section.querySelectorAll(
+                ".event-card:not([style*='display: none'])"
+              );
+              (section as HTMLElement).style.display = visibleCards.length
+                ? "block"
+                : "none";
+            });
           });
+        }
 
-          const sections = document.querySelectorAll(
-            "#eventsGrid > section"
-          ) as NodeListOf<HTMLElement>;
-          sections.forEach((section) => {
-            const visibleCards = section.querySelectorAll(
-              ".event-card:not([style*='display: none'])"
-            );
-            section.style.display = visibleCards.length ? "block" : "none";
-          });
+        attachSearchInput();
+
+        window.addEventListener("pageshow", () => {
+          attachSearchInput();
         });
-      }
+      });
     </script>
   </SectionContainer>
 </Layout>
