@@ -20,7 +20,7 @@ if (!event) {
 ---
 
 <Layout>
-  <SectionContainer>
+  <SectionContainer class="py-24">
     <a
       href="/eventos"
       class="flex gap-2 items-center hover:underline text-base my-4"
@@ -28,6 +28,13 @@ if (!event) {
     </a>
     <h1 class="text-4xl font-bold mb-4">{event.title}</h1>
     <img class="w-full rounded-lg mb-6" src={event.image} alt={event.title} />
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      {
+        event.images?.map((i) => {
+          return <img class="w-full rounded-lg" src={i} alt={event.title} />;
+        })
+      }
+    </div>
     <p class="text-base text-white/60">{event.description}</p>
   </SectionContainer>
 </Layout>
