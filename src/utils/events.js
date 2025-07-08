@@ -1,4 +1,4 @@
-import { urlsBianca, urlsClubPesca, urlsComplejoQuinta, urlsDelfina, urlsEmpresarial, urlsIngrid , urlsJazmin, urlsMichelin, urlsNose, urlsSyM} from "./images";
+import { urlsBianca, urlsClubPesca, urlsComplejoQuinta, urlsDelfina, urlsEmpresarial, urlsIngrid , urlsJazmin, urlsMichelin, urlsSyM} from "./images";
 
 export const events = [
   {
