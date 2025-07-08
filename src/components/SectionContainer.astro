@@ -1,8 +1,8 @@
 ---
-const { id, className, classNameSection } = Astro.props;
+const { id, className } = Astro.props;
 ---
 
-<section id={id} {...Astro.props} class={classNameSection}>
+<section id={id} {...Astro.props}>
   <div
     class={` ${className} max-w-4xl w-full mx-auto min-h-screen px-4 sm:px-0 flex flex-col items-center justify-center`}
   >

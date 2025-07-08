@@ -14,10 +14,10 @@ import { FAQs } from "../utils/constans.js";
     {
       FAQs.map(({ id, question, p1 }) => (
         <details
-          class="faq-item border-2 border-fuchsia-400/70 rounded-xl hover:bg-black/30 transition w-full duration-300 cursor-pointer"
+          class="faq-item border-2 open:[&>summary]:text-fuchsia-400 border-fuchsia-400/70 rounded-xl hover:bg-neutral-950 bg-neutral-900 transition w-full duration-300 cursor-pointer"
           data-id={id}
         >
-          <summary class="text-primary-txt text-sm sm:text-base marker:text-xs px-4 py-2">
+          <summary class="text-sm sm:text-base marker:text-xs px-4 py-2">
             {question}
           </summary>
           <p class="text-xs sm:text-sm opacity-80 px-4 pb-4 my-2">{p1}</p>
@@ -36,7 +36,7 @@ import { FAQs } from "../utils/constans.js";
   </style>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("astro:page-load", () => {
       const faqItems = document.querySelectorAll(".faq-item");
 
       faqItems.forEach((item) => {
