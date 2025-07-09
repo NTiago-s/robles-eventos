@@ -29,10 +29,10 @@ const { title, description, txt, href, icon, color } = Astro.props;
   </div>
 </div>
 
-<script>
+<script is:inline>
   const links = document.querySelectorAll("#linkItem");
 
-  links.forEach((link: any) => {
+  links.forEach((link) => {
     const originalBg = getComputedStyle(link).backgroundColor;
     const hoverColor = link.dataset.color;
 

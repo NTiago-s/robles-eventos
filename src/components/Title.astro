@@ -1,3 +1,7 @@
-<h2 class="text-3xl sm:text-4xl font-semibold text-center mb-16">
+---
+const { className } = Astro.props;
+---
+
+<h2 class={`text-3xl sm:text-4xl font-semibold text-center mb-16 ${className}`}>
   <slot />
 </h2>
