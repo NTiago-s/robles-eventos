@@ -1,15 +1,10 @@
 ---
 import SectionContainer from "../../components/SectionContainer.astro";
+import Title from "../../components/Title.astro";
 import Layout from "../../layouts/Layout.astro";
-import { events } from "../../utils/events";
-const slugify = (str: string): string =>
-  str
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^\w\s-]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
+import { events, slugify } from "../../utils/events";
+import Search from "../../components/icons/Search.astro";
+export const prerender = true;
 
 const groupedEvents = events.reduce(
   (acc, event) => {
@@ -25,141 +20,175 @@ const groupedEvents = events.reduce(
   title="Galería de Eventos"
   description="Explorá nuestra galería de eventos: fotos de cumpleaños de 15, bodas, aniversarios y celebraciones organizadas por Los Robles."
 >
-  <SectionContainer id="galeria" class="py-24">
-    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">
-      Galeria de Eventos
-    </h2>
+  <SectionContainer
+    id="galeria"
+    className="py-20 flex flex-col justify-start gap-12"
+  >
+    <!-- <Title className="!mb-0"> Galeria de Eventos </Title> -->
 
-    <input
-      id="searchInput"
-      type="text"
-      placeholder="Buscar por nombre, tipo o fecha..."
-      class="border px-4 py-2 w-full rounded mb-10"
-    />
+    <div class="relative w-full mb-6">
+      <button class="absolute left-2 -translate-y-1/2 top-1/2 p-1">
+        <Search />
+      </button>
+      <input
+        class="input w-full rounded-full px-8 py-4 border-2 border-transparent focus:outline-none focus:border-indigo-500 placeholder-gray-400 transition-all duration-300 shadow-md bg-neutral-900"
+        placeholder="Buscar por nombre, tipo de evento, mes o año"
+        id="searchInput"
+        type="search"
+      />
+    </div>
 
-    <div id="eventsGrid" class="space-y-12">
+    <div id="eventsGrid" class="flex flex-col gap-20">
       {
         Object.entries(groupedEvents).map(([type, events]) => (
-          <section>
-            <h3 class="text-2xl font-bold mb-6 underline">{type}</h3>
+          <section class="flex flex-col gap-12">
+            <h3 class="text-3xl text-center font-extrabold text-fuchsia-400">
+              {type}
+            </h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {events.map((event) => (
-                <div
-                  class="event-card"
+                <article
+                  class="event-card shadow-2xl relative"
                   data-title={event.title.toLowerCase()}
                   data-type={event.type.toLowerCase()}
                   data-date={event.date}
                 >
-                  <a href={`/eventos/${slugify(event.title)}`}>
+                  <a
+                    class="image-preview"
+                    href={`/eventos/${slugify(event.title)}`}
+                    aria-label={event.title}
+                  >
                     <img
                       src={event.image}
                       alt={event.title}
-                      class="rounded-lg"
+                      class="rounded object-cover aspect-square size-full z-0"
+                      transition:name={`img-${event.title}`}
                     />
-                    <h4 class="text-sm font-semibold mt-2">{event.title}</h4>
+                    <h4 class="text-base sm:text-lg text-balance w-full max-w-3/4 font-extrabold absolute left-2 bottom-4 z-10">
+                      {event.title}
+                    </h4>
                   </a>
-                </div>
+                </article>
               ))}
             </div>
           </section>
         ))
       }
     </div>
-    <script>
-      document.addEventListener("astro:page-load", () => {
-        function normalizeText(text: string): string {
-          return text
-            .toLowerCase()
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .trim();
-        }
-
-        function parseDateFormats(dateStr: string): string[] {
-          const date = new Date(dateStr);
-          const monthNames = [
-            "enero",
-            "febrero",
-            "marzo",
-            "abril",
-            "mayo",
-            "junio",
-            "julio",
-            "agosto",
-            "septiembre",
-            "octubre",
-            "noviembre",
-            "diciembre",
-          ];
-
-          if (isNaN(date.getTime())) return [];
-
-          const day = date.getDate().toString().padStart(2, "0");
-          const monthNum = (date.getMonth() + 1).toString().padStart(2, "0");
-          const year = date.getFullYear();
-          const monthName = monthNames[date.getMonth()];
-
-          return [
-            `${day}-${monthNum}-${year}`,
-            `${day}/${monthNum}/${year}`,
-            `${year}-${monthNum}-${day}`,
-            `${year}/${monthNum}/${day}`,
-            `${day} ${monthName} ${year}`,
-            `${day} de ${monthName} de ${year}`,
-            monthName,
-          ];
-        }
-
-        function matchCard(card: HTMLElement, query: string): boolean {
-          const title = normalizeText(card.dataset.title || "");
-          const type = normalizeText(card.dataset.type || "");
-          const dateRaw = card.dataset.date || "";
-          const formats = parseDateFormats(dateRaw);
-          const queryNorm = normalizeText(query);
-
-          return (
-            title.includes(queryNorm) ||
-            type.includes(queryNorm) ||
-            formats.some((f) => f.includes(queryNorm))
-          );
-        }
-
-        function attachSearchInput() {
-          const input = document.getElementById(
-            "searchInput"
-          ) as HTMLInputElement | null;
-          const cards = document.querySelectorAll(".event-card");
-
-          if (!input) return;
-
-          input.addEventListener("input", (e) => {
-            const query = (e.target as HTMLInputElement).value;
-
-            cards.forEach((card) => {
-              const isVisible = matchCard(card as HTMLElement, query);
-              (card as HTMLElement).style.display = isVisible
-                ? "block"
-                : "none";
-            });
-
-            const sections = document.querySelectorAll("#eventsGrid > section");
-            sections.forEach((section) => {
-              const visibleCards = section.querySelectorAll(
-                ".event-card:not([style*='display: none'])"
-              );
-              (section as HTMLElement).style.display = visibleCards.length
-                ? "block"
-                : "none";
-            });
-          });
-        }
-
-        attachSearchInput();
-
-        window.addEventListener("pageshow", () => {
-          attachSearchInput();
-        });
-      });
-    </script>
   </SectionContainer>
 </Layout>
+
+<style>
+  .image-preview {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-preview::after {
+    transition: background 0.3s;
+    content: "";
+    position: absolute;
+    background: #000b;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .image-preview:hover::after {
+    background: #0005;
+  }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    function normalizeText(text: string): string {
+      return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+    }
+
+    function parseDateFormats(dateStr: string): string[] {
+      const date = new Date(dateStr);
+      const monthNames = [
+        "enero",
+        "febrero",
+        "marzo",
+        "abril",
+        "mayo",
+        "junio",
+        "julio",
+        "agosto",
+        "septiembre",
+        "octubre",
+        "noviembre",
+        "diciembre",
+      ];
+
+      if (isNaN(date.getTime())) return [];
+
+      const day = date.getDate().toString().padStart(2, "0");
+      const monthNum = (date.getMonth() + 1).toString().padStart(2, "0");
+      const year = date.getFullYear();
+      const monthName = monthNames[date.getMonth()];
+
+      return [
+        `${day}-${monthNum}-${year}`,
+        `${day}/${monthNum}/${year}`,
+        `${year}-${monthNum}-${day}`,
+        `${year}/${monthNum}/${day}`,
+        `${day} ${monthName} ${year}`,
+        `${day} de ${monthName} de ${year}`,
+        monthName,
+      ];
+    }
+
+    function matchCard(card: HTMLElement, query: string): boolean {
+      const title = normalizeText(card.dataset.title || "");
+      const type = normalizeText(card.dataset.type || "");
+      const dateRaw = card.dataset.date || "";
+      const formats = parseDateFormats(dateRaw);
+      const queryNorm = normalizeText(query);
+
+      return (
+        title.includes(queryNorm) ||
+        type.includes(queryNorm) ||
+        formats.some((f) => f.includes(queryNorm))
+      );
+    }
+
+    function attachSearchInput() {
+      const input = document.getElementById(
+        "searchInput"
+      ) as HTMLInputElement | null;
+      const cards = document.querySelectorAll(".event-card");
+
+      if (!input) return;
+
+      input.addEventListener("input", (e) => {
+        const query = (e.target as HTMLInputElement).value;
+
+        cards.forEach((card) => {
+          const isVisible = matchCard(card as HTMLElement, query);
+          (card as HTMLElement).style.display = isVisible ? "" : "none";
+        });
+
+        const sections = document.querySelectorAll("#eventsGrid > section");
+        sections.forEach((section) => {
+          const visibleCards = section.querySelectorAll(
+            ".event-card:not([style*='display: none'])"
+          );
+          (section as HTMLElement).style.display = visibleCards.length
+            ? ""
+            : "none";
+        });
+      });
+    }
+
+    attachSearchInput();
+
+    window.addEventListener("pageshow", () => {
+      attachSearchInput();
+    });
+  });
+</script>

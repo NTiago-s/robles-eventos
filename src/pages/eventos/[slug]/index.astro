@@ -1,8 +1,12 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import { events, slugify } from "../../../utils/events";
-import ReturnArrow from "../../../../public/icons/return-arrow.svg";
+import Arrow from "../../../components/icons/Arrow.astro";
 import SectionContainer from "../../../components/SectionContainer.astro";
+import Download from "../../../components/icons/Download.astro";
+import DownloadFile from "../../../components/icons/DownloadFile.astro";
+import Close from "../../../components/icons/Close.astro";
+export const prerender = true;
 
 export function getStaticPaths() {
   return events.map((event) => ({
@@ -19,24 +23,50 @@ if (!event) {
 }
 ---
 
-<Layout>
-  <SectionContainer class="py-24">
-    <a
-      href="/eventos"
-      class="flex gap-2 items-center hover:underline text-base my-4"
+<Layout title={event.title}>
+  <SectionContainer className="py-20 flex flex-col gap-4 items-start">
+    <div
+      class="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full"
     >
-      <ReturnArrow /> Volver a la Galería
-    </a>
+      <a
+        href="/eventos"
+        class="flex items-center group relative hover:opacity-70 gap-1 !px-2 !py-1 transition-opacity"
+      >
+        <Arrow
+          class="group-hover:-translate-x-0.5 transition-transform duration-300"
+        /> Volver a la Galería
+      </a>
+      <button
+        id="download-all"
+        class="flex items-center group relative hover:opacity-70 gap-1 !m-0 !px-2 !py-1 transition-opacity"
+        data-slug={slug}
+      >
+        <DownloadFile
+          class="group-hover:-translate-x-0.5 transition-transform duration-300"
+        /> Descargar todas las imágenes
+      </button>
+    </div>
+    <div
+      transition:name={`img-${event.title}`}
+      class="w-full flex flex-col items-center justify-center gap-2 p-12 rounded-md"
+      style={`background: linear-gradient(#000,#0009), url(${event.image}); background-size:cover; background-position:center`}
+    >
+      <span class="text-center text-xs sm:text-sm">
+        {event.date}
+      </span>
+      <h1
+        class="text-3xl uppercase sm:text-4xl bg-cover bg-center font-bold tracking-wider text-center text-balance"
+      >
+        {event.title}
+      </h1>
+      <p class="text-pretty text-center opacity-80">{event.description}</p>
+    </div>
 
-    <h1 class="text-4xl font-bold mb-4">{event.title}</h1>
-
-    <img class="w-full rounded-lg mb-6" src={event.image} alt={event.title} />
-
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    <div class="columns-3 space-y-4 space-x-4">
       {
         event.images?.map((img, index) => (
           <img
-            class="w-full rounded-lg cursor-pointer hover:opacity-80 transition"
+            class="size-full object-cover break-inside-avoid rounded shadow-2xl cursor-pointer hover:opacity-70 transition-all"
             src={img}
             alt={`Imagen ${index + 1}`}
             data-index={index}
@@ -46,23 +76,27 @@ if (!event) {
       }
     </div>
 
-    <p class="text-base text-white/60 mt-8">{event.description}</p>
-
     <div
       id="image-modal"
       class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80"
     >
-      <button
-        id="modal-close"
-        class="absolute top-4 right-6 text-white text-3xl font-bold"
-        aria-label="Cerrar"
-      >
-        &times;
-      </button>
+      <div class="absolute top-4 right-6 flex items-start gap-2">
+        <a
+          id="modal-download"
+          class="download"
+          aria-label="Descargar imagen"
+          download
+        >
+          <Download />
+        </a>
+        <button id="modal-close" aria-label="Cerrar">
+          <Close />
+        </button>
+      </div>
 
       <button
         id="modal-prev"
-        class="absolute left-4 text-white text-4xl font-bold"
+        class="absolute left-4 text-4xl"
         aria-label="Anterior"
       >
         &#10094;
@@ -70,70 +104,139 @@ if (!event) {
 
       <img
         id="modal-img"
-        class="max-h-[80vh] max-w-[90vw] rounded-lg"
+        class="max-h-[80vh] max-w-[90vw] rounded-md"
         src=""
         alt="Imagen ampliada"
       />
 
       <button
         id="modal-next"
-        class="absolute right-4 text-white text-4xl font-bold"
+        class="absolute right-4 text-4xl"
         aria-label="Siguiente"
       >
         &#10095;
       </button>
     </div>
-
-    <script is:inline>
-      document.addEventListener("astro:page-load", () => {
-        const images = Array.from(
-          document.querySelectorAll("[data-index]")
-        ).map((img) => img.src);
-        const modal = document.getElementById("image-modal");
-        const modalImg = document.getElementById("modal-img");
-        const closeBtn = document.getElementById("modal-close");
-        const nextBtn = document.getElementById("modal-next");
-        const prevBtn = document.getElementById("modal-prev");
-
-        let currentIndex = 0;
-
-        window.openModal = function (e) {
-          currentIndex = parseInt(e.target.getAttribute("data-index"));
-          modalImg.src = images[currentIndex];
-          modal.classList.remove("hidden");
-          modal.classList.add("flex");
-        };
-
-        function closeModal() {
-          modal.classList.add("hidden");
-          modal.classList.remove("flex");
-        }
-
-        function showNext() {
-          currentIndex = (currentIndex + 1) % images.length;
-          modalImg.src = images[currentIndex];
-        }
-
-        function showPrev() {
-          currentIndex = (currentIndex - 1 + images.length) % images.length;
-          modalImg.src = images[currentIndex];
-        }
-
-        closeBtn.addEventListener("click", closeModal);
-        nextBtn.addEventListener("click", showNext);
-        prevBtn.addEventListener("click", showPrev);
-
-        window.addEventListener("keydown", (e) => {
-          if (modal.classList.contains("hidden")) return;
-          if (e.key === "ArrowRight") showNext();
-          if (e.key === "ArrowLeft") showPrev();
-          if (e.key === "Escape") closeModal();
-        });
-
-        modal.addEventListener("click", (e) => {
-          if (e.target === modal) closeModal();
-        });
-      });
-    </script>
   </SectionContainer>
 </Layout>
+
+<style>
+  button,
+  .download {
+    transition: opacity 0.3s;
+    cursor: pointer;
+    color: #fff;
+    padding: 8px;
+  }
+
+  button:hover,
+  .download:hover {
+    opacity: 0.7;
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"
+></script>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const images = Array.from(document.querySelectorAll("[data-index]")).map(
+      (img) => img.src
+    );
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeBtn = document.getElementById("modal-close");
+    const nextBtn = document.getElementById("modal-next");
+    const prevBtn = document.getElementById("modal-prev");
+
+    let currentIndex = 0;
+
+    const downloadBtn = document.getElementById("modal-download");
+
+    window.openModal = function (e) {
+      currentIndex = parseInt(e.target.getAttribute("data-index"));
+      const src = images[currentIndex];
+      modalImg.src = src;
+
+      // No usar downloadBtn.href porque Facebook lo bloquea
+      // En vez de eso, agregamos un listener que descargue la imagen vía fetch
+      downloadBtn.onclick = async function () {
+        const response = await fetch(src);
+        const blob = await response.blob();
+
+        const extension = blob.type.split("/")[1]; // ej: jpeg
+        const fileName = `imagen-${currentIndex + 1}.${extension}`;
+
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = fileName;
+        link.click();
+        URL.revokeObjectURL(link.href);
+      };
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    };
+
+    function closeModal() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % images.length;
+      modalImg.src = images[currentIndex];
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      modalImg.src = images[currentIndex];
+    }
+
+    closeBtn.addEventListener("click", closeModal);
+    nextBtn.addEventListener("click", showNext);
+    prevBtn.addEventListener("click", showPrev);
+
+    window.addEventListener("keydown", (e) => {
+      if (modal.classList.contains("hidden")) return;
+      if (e.key === "ArrowRight") showNext();
+      if (e.key === "ArrowLeft") showPrev();
+      if (e.key === "Escape") closeModal();
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    const downloadAllBtn = document.getElementById("download-all");
+    const slug = downloadAllBtn?.dataset.slug || "evento"; // fallback por si no existe
+
+    downloadAllBtn?.addEventListener("click", async () => {
+      const zip = new JSZip();
+      const folder = zip.folder("evento-imagenes");
+
+      // Descargar cada imagen y agregarla al zip
+      const fetchImages = images.map(async (url, index) => {
+        const response = await fetch(url);
+        const blob = await response.blob();
+        const fileName = `imagen-${index + 1}${getExtensionFromBlob(blob)}`;
+        folder.file(fileName, blob);
+      });
+
+      await Promise.all(fetchImages);
+
+      // Generar el zip y forzar descarga
+      const content = await zip.generateAsync({ type: "blob" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(content);
+      a.download = `imagenes-evento-${slug}.zip`;
+      a.click();
+    });
+
+    function getExtensionFromBlob(blob) {
+      const type = blob.type; // ej: image/jpeg
+      const ext = type.split("/")[1]; // jpeg
+      return `.${ext}`;
+    }
+  });
+</script>

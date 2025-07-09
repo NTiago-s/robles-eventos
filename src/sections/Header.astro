@@ -151,13 +151,13 @@ import { NAV_OPTIONS } from "../utils/constans";
   }
 </style>
 
-<script>
+<script is:inline>
   document.addEventListener("astro:page-load", () => {
     const burger = document.getElementById("burger");
     const navLinks = document.querySelectorAll("nav a");
 
     if (window.innerWidth < 640) {
-      navLinks.forEach((link: any) => {
+      navLinks.forEach((link) => {
         link.addEventListener("click", () => {
           if (burger instanceof HTMLInputElement && burger.checked)
             burger.checked = false;
