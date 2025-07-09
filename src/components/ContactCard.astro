@@ -30,24 +30,26 @@ const { title, description, txt, href, icon, color } = Astro.props;
 </div>
 
 <script is:inline>
-  const links = document.querySelectorAll("#linkItem");
+  document.addEventListener("astro:page-load", () => {
+    const links = document.querySelectorAll("#linkItem");
 
-  links.forEach((link) => {
-    const originalBg = getComputedStyle(link).backgroundColor;
-    const hoverColor = link.dataset.color;
+    links.forEach((link) => {
+      const originalBg = getComputedStyle(link).backgroundColor;
+      const hoverColor = link.dataset.color;
 
-    if (hoverColor != "#f8316a") {
-      link.addEventListener("mouseenter", () => {
-        link.style.backgroundColor = hoverColor;
+      if (hoverColor != "#f8316a") {
+        link.addEventListener("mouseenter", () => {
+          link.style.backgroundColor = hoverColor;
+        });
+      } else {
+        link.addEventListener("mouseenter", () => {
+          link.style.background = `linear-gradient(60deg,${hoverColor}, #b22aac)`;
+        });
+      }
+
+      link.addEventListener("mouseleave", () => {
+        link.style.background = originalBg;
       });
-    } else {
-      link.addEventListener("mouseenter", () => {
-        link.style.background = `linear-gradient(60deg,${hoverColor}, #b22aac)`;
-      });
-    }
-
-    link.addEventListener("mouseleave", () => {
-      link.style.background = originalBg;
     });
   });
 </script>
