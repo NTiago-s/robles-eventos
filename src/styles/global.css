@@ -14,7 +14,7 @@ body {
   scroll-snap-type: y mandatory;
 }
 
-section {
+.section-snap {
   scroll-snap-align: center;
 }
 

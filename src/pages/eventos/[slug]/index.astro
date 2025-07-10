@@ -30,6 +30,7 @@ if (!event) {
     >
       <a
         href="/eventos"
+        aria-label="Volver a la galería"
         class="flex items-center group relative hover:opacity-70 gap-1 !px-2 !py-1 transition-opacity"
       >
         <Arrow
@@ -38,6 +39,7 @@ if (!event) {
       </a>
       <button
         id="download-all"
+        aria-label="Descargar todas las imágenes"
         class="flex items-center group relative hover:opacity-70 gap-1 !m-0 !px-2 !py-1 transition-opacity"
         data-slug={slug}
       >
@@ -47,7 +49,6 @@ if (!event) {
       </button>
     </div>
     <div
-      transition:name={`img-${event.title}`}
       class="w-full flex flex-col items-center justify-center gap-2 p-12 rounded-md"
       style={`background: linear-gradient(#000,#0009), url(${event.image}); background-size:cover; background-position:center`}
     >
@@ -69,6 +70,7 @@ if (!event) {
             class="size-full object-cover break-inside-avoid rounded shadow-2xl cursor-pointer hover:opacity-70 transition-all"
             src={img}
             alt={`Imagen ${index + 1}`}
+            title={`Imagen ${index + 1}`}
             data-index={index}
             onclick="openModal(event)"
           />
@@ -89,7 +91,7 @@ if (!event) {
         >
           <Download />
         </a>
-        <button id="modal-close" aria-label="Cerrar">
+        <button id="modal-close" aria-label="Cerrar imagen">
           <Close />
         </button>
       </div>
@@ -97,7 +99,7 @@ if (!event) {
       <button
         id="modal-prev"
         class="absolute left-4 text-4xl"
-        aria-label="Anterior"
+        aria-label="Anterior imagen"
       >
         &#10094;
       </button>
@@ -112,7 +114,7 @@ if (!event) {
       <button
         id="modal-next"
         class="absolute right-4 text-4xl"
-        aria-label="Siguiente"
+        aria-label="Siguiente imagen"
       >
         &#10095;
       </button>
