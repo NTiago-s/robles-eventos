@@ -87,7 +87,7 @@ export const CONTACT = [
     title: "Facebook",
     description: "Conéctate por mi perfil personal",
     txt: "Ir a Facebook",
-    href: "https://www.facebook.com/share/p/1DwYhkViFS/",
+    href: "https://www.facebook.com/carloshernan.lizarreta1",
     color: "#0187e9",
   },
   {
