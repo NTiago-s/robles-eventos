@@ -26,6 +26,7 @@ import {
   urlsSole,
   urlsMoni,
   urlsPaz,
+  urlsSofiPlacente,
 } from "./images";
 
 export const events = [
@@ -34,7 +35,7 @@ export const events = [
     images: urlsIngrid,
     title: "Ingrid & Leo Sociedad Rural",
     description: "Fiesta de casamiento",
-    type: "Casamiento",
+    type: "Casamientos",
     date: "23/04/2025",
   },
   {
@@ -50,7 +51,7 @@ export const events = [
     images: urlsSyM,
     title: "Santi y Mica",
     description: "Fiesta de casamiento",
-    type: "Casamiento",
+    type: "Casamientos",
     date: "29/03/2025",
   },
   {
@@ -90,7 +91,7 @@ export const events = [
     images: urlsLara,
     title: "Lara",
     description: "Noche mágica Lara",
-    type: "Evento",
+    type: "Eventos",
     date: "09/03/2025",
   },
   {
@@ -131,7 +132,7 @@ export const events = [
     images: urlsClubPesca,
     title: "Club de Pesca Huanguelén",
     description: "Fiesta social",
-    type: "Evento",
+    type: "Eventos",
     date: "20/01/2025",
   },
   {
@@ -155,7 +156,7 @@ export const events = [
     images: urlsColegioNacional,
     title: "Colegio Nacional",
     description: "Egreso del Colegio Nacional promo 2024",
-    type: "Escolar",
+    type: "Escolares",
     date: "22/12/2024",
   },
   {
@@ -163,7 +164,7 @@ export const events = [
     images: urlsCatia,
     title: "Katia Fest",
     description: "Noche mágica de Katia",
-    type: "Evento",
+    type: "Eventos",
     date: "21/10/2024",
   },
   {
@@ -195,7 +196,7 @@ export const events = [
     images: urlsPyM,
     title: "Pame y Pablo",
     description: "Casamiento de Pame y Pablo",
-    type: "Casamiento",
+    type: "Casamientos",
     date: "07/07/2024",
   },
   {
@@ -211,7 +212,7 @@ export const events = [
     images: urlsAlexyMili,
     title: "Alex y Mili",
     description: "Casamiento de Alex y Mili",
-    type: "Casamiento",
+    type: "Casamientos",
     date: "12/03/2023",
   },
   {
@@ -219,7 +220,7 @@ export const events = [
     images: urlsVaneyFran,
     title: "Vane y Fran",
     description: "Casamiento de Vane y Fran",
-    type: "Casamiento",
+    type: "Casamientos",
     date: "08/02/2023",
   },
   {
@@ -245,6 +246,14 @@ export const events = [
     description: "Cumpleaños de 15",
     type: "Cumpleaños",
     date: "13/02/2023",
+  },
+  {
+    image: urlsSofiPlacente[0],
+    images: urlsSofiPlacente,
+    title: "XV de Sofi Placente",
+    description: "Cumpleaños de 15 en Salon Dorado",
+    type: "Cumpleaños",
+    date: "24/05/2025",
   },
 ];
 
