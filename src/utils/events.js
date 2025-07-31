@@ -27,6 +27,10 @@ import {
   urlsMoni,
   urlsPaz,
   urlsSofiPlacente,
+  urlsDagnaJoaquin,
+  urlsSindicatoLuzFuerza,
+  urlsTukerIriarte,
+  urlsAymiHubert,
 } from "./images";
 
 export const events = [
@@ -49,7 +53,7 @@ export const events = [
   {
     image: urlsSyM[0],
     images: urlsSyM,
-    title: "Santi y Mica",
+    title: "Santi & Mica",
     description: "Fiesta de casamiento",
     type: "Casamientos",
     date: "29/03/2025",
@@ -194,7 +198,7 @@ export const events = [
   {
     image: urlsPyM[0],
     images: urlsPyM,
-    title: "Pame y Pablo",
+    title: "Pame & Pablo",
     description: "Casamiento de Pame y Pablo",
     type: "Casamientos",
     date: "07/07/2024",
@@ -210,7 +214,7 @@ export const events = [
   {
     image: urlsAlexyMili[0],
     images: urlsAlexyMili,
-    title: "Alex y Mili",
+    title: "Alex & Mili",
     description: "Casamiento de Alex y Mili",
     type: "Casamientos",
     date: "12/03/2023",
@@ -218,7 +222,7 @@ export const events = [
   {
     image: urlsVaneyFran[0],
     images: urlsVaneyFran,
-    title: "Vane y Fran",
+    title: "Vane & Fran",
     description: "Casamiento de Vane y Fran",
     type: "Casamientos",
     date: "08/02/2023",
@@ -254,6 +258,38 @@ export const events = [
     description: "Cumpleaños de 15 en Salon Dorado",
     type: "Cumpleaños",
     date: "24/05/2025",
+  },
+  {
+    image: urlsDagnaJoaquin[0],
+    images: urlsDagnaJoaquin,
+    title: "Dagna & Joaquín",
+    description: "Casamiento en Complejo la Quinta",
+    type: "Casamientos",
+    date: "09/02/2025",
+  },
+  {
+    image: urlsSindicatoLuzFuerza[0],
+    images: urlsSindicatoLuzFuerza,
+    title: "Sindicato Luz y Fuerza",
+    description: "Evento en el salon Magnolia Eventos",
+    type: "Eventos",
+    date: "19/07/2025",
+  },
+  {
+    image: urlsTukerIriarte[0],
+    images: urlsTukerIriarte,
+    title: "Tuker Iriarte",
+    description: "Evento empresarial en campo La pista",
+    type: "Empresarial",
+    date: "18/07/2025",
+  },
+  {
+    image: urlsAymiHubert[0],
+    images: urlsAymiHubert,
+    title: "XV de Aymi Hubert",
+    description: "Cumpleaños de 15 en Salon Magnolia Eventos",
+    type: "Cumpleaños",
+    date: "12/07/2025",
   },
 ];
 
