@@ -47,7 +47,7 @@ export const events = [
     images: urlsJazmin,
     title: "XV de Jazmín",
     description: "Fiesta de 15 años",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "06/04/2025",
   },
   {
@@ -63,7 +63,7 @@ export const events = [
     images: urlsDelfina,
     title: "XV de Delfina",
     description: "Fiesta de 15 años",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "06/04/2025",
   },
   {
@@ -71,7 +71,7 @@ export const events = [
     images: urlsComplejoQuinta,
     title: "XV de María Paz",
     description: "Fiesta de 15 años en Complejo Quinta",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "15/03/2025",
   },
   {
@@ -79,7 +79,7 @@ export const events = [
     images: urlsMia,
     title: "XV de Mía",
     description: "Fiesta de 15 años",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "09/03/2025",
   },
   {
@@ -87,24 +87,8 @@ export const events = [
     images: urlsBianca,
     title: "XV de Bianca",
     description: "Fiesta de 15 años",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "09/03/2025",
-  },
-  {
-    image: urlsLara[0],
-    images: urlsLara,
-    title: "Lara",
-    description: "Noche mágica Lara",
-    type: "Eventos",
-    date: "09/03/2025",
-  },
-  {
-    image: urlsMichelin[0],
-    images: urlsMichelin,
-    title: "Michelin",
-    description: "Evento corporativo",
-    type: "Empresarial",
-    date: "21/01/2025",
   },
   {
     image: urlsEstela[0],
@@ -115,12 +99,28 @@ export const events = [
     date: "21/01/2025",
   },
   {
+    image: urlsMichelin[0],
+    images: urlsMichelin,
+    title: "Michelin",
+    description: "Evento corporativo",
+    type: "Empresariales",
+    date: "21/01/2025",
+  },
+  {
+    image: urlsLara[0],
+    images: urlsLara,
+    title: "Lara",
+    description: "Noche mágica Lara",
+    type: "Eventos",
+    date: "09/03/2025",
+  },
+  {
     image: urlsEnergia[0],
     images: urlsEnergia,
     title: "EDES",
     description:
       "Evento corporativo de empresa distribuidora de la energía EDES",
-    type: "Empresarial",
+    type: "Empresariales",
     date: "21/01/2025",
   },
   {
@@ -128,7 +128,7 @@ export const events = [
     images: urlsAbril,
     title: "XV de Abril",
     description: "Fiesta de 15 años",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "20/01/2025",
   },
   {
@@ -144,7 +144,7 @@ export const events = [
     images: urlsCami,
     title: "XV de Cami",
     description: "Fiesta de 15 años",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "09/01/2025",
   },
   {
@@ -152,7 +152,7 @@ export const events = [
     images: urlsEmpresarialMA,
     title: "Evento Martín Alarcia",
     description: "Evento corporativo",
-    type: "Empresarial",
+    type: "Empresariales",
     date: "09/01/2025",
   },
   {
@@ -176,7 +176,7 @@ export const events = [
     images: urlsTami,
     title: "XV de Tamara",
     description: "Cumpleaños de 15 años",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "30/09/2024",
   },
   {
@@ -192,7 +192,7 @@ export const events = [
     images: urlsValentina,
     title: "XV de Valentina",
     description: "Cumpleaños de 15 años",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "01/08/2024",
   },
   {
@@ -208,7 +208,7 @@ export const events = [
     images: urlsSofia,
     title: "XV de Sofia",
     description: "Cumpleaños de 15 años",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "26/06/2024",
   },
   {
@@ -248,7 +248,7 @@ export const events = [
     images: urlsPaz,
     title: "XV de Paz",
     description: "Cumpleaños de 15",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "13/02/2023",
   },
   {
@@ -256,7 +256,7 @@ export const events = [
     images: urlsSofiPlacente,
     title: "XV de Sofi Placente",
     description: "Cumpleaños de 15 en Salon Dorado",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "24/05/2025",
   },
   {
@@ -280,7 +280,7 @@ export const events = [
     images: urlsTukerIriarte,
     title: "Tuker Iriarte",
     description: "Evento empresarial en campo La pista",
-    type: "Empresarial",
+    type: "Empresariales",
     date: "18/07/2025",
   },
   {
@@ -288,7 +288,7 @@ export const events = [
     images: urlsAymiHubert,
     title: "XV de Aymi Hubert",
     description: "Cumpleaños de 15 en Salon Magnolia Eventos",
-    type: "Cumpleaños",
+    type: "Cumpleaños de 15",
     date: "12/07/2025",
   },
 ];
