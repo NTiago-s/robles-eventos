@@ -21,7 +21,6 @@ export const urlsIngrid = [
   "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-20.jpeg",
 ];
 
-
 export const urlsJazmin = [
   "/gallery/imagenes-evento-xv-de-jazmin/imagen-1.jpeg",
   "/gallery/imagenes-evento-xv-de-jazmin/imagen-2.jpeg",
@@ -34,9 +33,8 @@ export const urlsJazmin = [
   "/gallery/imagenes-evento-xv-de-jazmin/imagen-9.jpeg",
 ];
 
-
 export const urlsSyM = [
- "/gallery/imagenes-evento-santi-y-mica/imagen-1.jpeg",
+  "/gallery/imagenes-evento-santi-y-mica/imagen-1.jpeg",
   "/gallery/imagenes-evento-santi-y-mica/imagen-2.jpeg",
   "/gallery/imagenes-evento-santi-y-mica/imagen-3.jpeg",
   "/gallery/imagenes-evento-santi-y-mica/imagen-4.jpeg",
@@ -85,7 +83,6 @@ export const urlsComplejoQuinta = [
   "/gallery/imagenes-evento-xv-de-maria-paz/imagen-15.jpeg",
 ];
 
-
 export const urlsBianca = [
   "/gallery/imagenes-evento-xv-de-bianca/imagen-1.jpeg",
   "/gallery/imagenes-evento-xv-de-bianca/imagen-2.jpeg",
@@ -97,7 +94,7 @@ export const urlsBianca = [
   "/gallery/imagenes-evento-xv-de-bianca/imagen-8.jpeg",
   "/gallery/imagenes-evento-xv-de-bianca/imagen-9.jpeg",
   "/gallery/imagenes-evento-xv-de-bianca/imagen-10.jpeg",
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-11.jpeg",  
+  "/gallery/imagenes-evento-xv-de-bianca/imagen-11.jpeg",
 ];
 
 export const urlsMia = [
@@ -197,7 +194,6 @@ export const urlsAbril = [
   "/gallery/imagenes-evento-xv-de-abril/imagen-16.jpeg",
   "/gallery/imagenes-evento-xv-de-abril/imagen-17.jpeg",
 ];
-
 
 export const urlsClubPesca = [
   "/gallery/imagenes-evento-club-de-pesca-huanguelen/imagen-1.jpeg",
@@ -369,7 +365,7 @@ export const urlsAlexyMili = [
   "/gallery/imagenes-evento-alex-y-mili/imagen-11.jpeg",
   "/gallery/imagenes-evento-alex-y-mili/imagen-12.jpeg",
   "/gallery/imagenes-evento-alex-y-mili/imagen-13.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-14.jpeg",  
+  "/gallery/imagenes-evento-alex-y-mili/imagen-14.jpeg",
 ];
 
 export const urlsVaneyFran = [
@@ -415,7 +411,6 @@ export const urlsSole = [
   "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-14.jpeg",
 ];
 
-
 export const urlsMoni = [
   "/gallery/imagenes-evento-monica/imagen-1.jpeg",
   "/gallery/imagenes-evento-monica/imagen-2.jpeg",
@@ -458,7 +453,6 @@ export const urlsPaz = [
   "/gallery/imagenes-evento-xv-de-paz/imagen-17.jpeg",
 ];
 
-
 export const urlsSofiPlacente = [
   "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-1.jpeg",
   "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-2.jpeg",
@@ -471,4 +465,69 @@ export const urlsSofiPlacente = [
   "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-9.jpeg",
   "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-10.jpeg",
   "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-11.jpeg",
+];
+
+export const urlsDagnaJoaquin = [
+  "/gallery/imagenes-evento-dagna-joaquin/imagen-1.jpeg",
+  "/gallery/imagenes-evento-dagna-joaquin/imagen-2.jpeg",
+  "/gallery/imagenes-evento-dagna-joaquin/imagen-3.jpeg",
+  "/gallery/imagenes-evento-dagna-joaquin/imagen-4.jpeg",
+  "/gallery/imagenes-evento-dagna-joaquin/imagen-5.jpeg",
+  "/gallery/imagenes-evento-dagna-joaquin/imagen-6.jpeg",
+  "/gallery/imagenes-evento-dagna-joaquin/imagen-7.jpeg",
+  "/gallery/imagenes-evento-dagna-joaquin/imagen-8.jpeg",
+  "/gallery/imagenes-evento-dagna-joaquin/imagen-9.jpeg",
+];
+
+export const urlsSindicatoLuzFuerza = [
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-1.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-2.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-3.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-4.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-5.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-6.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-7.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-8.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-9.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-10.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-11.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-12.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-13.jpeg",
+  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-14.jpeg",
+];
+
+export const urlsTukerIriarte = [
+  "/gallery/imagenes-evento-tuker-iriarte/imagen-1.jpeg",
+  "/gallery/imagenes-evento-tuker-iriarte/imagen-2.jpeg",
+  "/gallery/imagenes-evento-tuker-iriarte/imagen-3.jpeg",
+  "/gallery/imagenes-evento-tuker-iriarte/imagen-4.jpeg",
+  "/gallery/imagenes-evento-tuker-iriarte/imagen-5.jpeg",
+  "/gallery/imagenes-evento-tuker-iriarte/imagen-6.jpeg",
+  "/gallery/imagenes-evento-tuker-iriarte/imagen-7.jpeg",
+  "/gallery/imagenes-evento-tuker-iriarte/imagen-8.jpeg",
+  "/gallery/imagenes-evento-tuker-iriarte/imagen-9.jpeg",
+  "/gallery/imagenes-evento-tuker-iriarte/imagen-10.jpeg",
+];
+
+export const urlsAymiHubert = [
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-1.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-2.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-3.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-4.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-5.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-6.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-7.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-8.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-9.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-10.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-11.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-12.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-13.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-14.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-15.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-16.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-17.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-18.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-19.jpeg",
+  "/gallery/imagenes-evento-15-aymi-hubert/imagen-20.jpeg",
 ];
