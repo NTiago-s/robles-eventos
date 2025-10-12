@@ -1,533 +1,350 @@
-export const urlsIngrid = [
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-1.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-2.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-3.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-4.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-5.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-6.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-7.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-8.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-9.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-10.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-11.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-12.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-13.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-14.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-15.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-16.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-17.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-18.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-19.jpeg",
-  "/gallery/imagenes-evento-ingrid-leo-sociedad-rural/imagen-20.jpeg",
-];
+export const urlsIngrid = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-ingrid-leo-sociedad-rural/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsJazmin = [
-  "/gallery/imagenes-evento-xv-de-jazmin/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-jazmin/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-jazmin/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-jazmin/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-jazmin/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-jazmin/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-jazmin/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-jazmin/imagen-8.jpeg",
-  "/gallery/imagenes-evento-xv-de-jazmin/imagen-9.jpeg",
-];
+export const urlsJazmin = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-jazmin/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsSyM = [
-  "/gallery/imagenes-evento-santi-y-mica/imagen-1.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-2.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-3.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-4.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-5.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-6.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-7.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-8.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-9.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-10.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-11.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-12.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-13.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-14.jpeg",
-  "/gallery/imagenes-evento-santi-y-mica/imagen-15.jpeg",
-];
+export const urlsSyM = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-santi-y-mica/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsDelfina = [
-  "/gallery/imagenes-evento-xv-de-delfina/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-delfina/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-delfina/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-delfina/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-delfina/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-delfina/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-delfina/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-delfina/imagen-8.jpeg",
-  "/gallery/imagenes-evento-xv-de-delfina/imagen-9.jpeg",
-  "/gallery/imagenes-evento-xv-de-delfina/imagen-10.jpeg",
-  "/gallery/imagenes-evento-xv-de-delfina/imagen-11.jpeg",
-];
+export const urlsDelfina = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-delfina/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsComplejoQuinta = [
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-8.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-9.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-10.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-11.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-12.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-13.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-14.jpeg",
-  "/gallery/imagenes-evento-xv-de-maria-paz/imagen-15.jpeg",
-];
+export const urlsMariaPaz = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-maria-paz/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsBianca = [
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-8.jpeg",
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-9.jpeg",
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-10.jpeg",
-  "/gallery/imagenes-evento-xv-de-bianca/imagen-11.jpeg",
-];
+export const urlsBianca = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-bianca/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsMia = [
-  "/gallery/imagenes-evento-xv-de-mia/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-mia/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-mia/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-mia/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-mia/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-mia/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-mia/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-mia/imagen-8.jpeg",
-  "/gallery/imagenes-evento-xv-de-mia/imagen-9.jpeg",
-  "/gallery/imagenes-evento-xv-de-mia/imagen-10.jpeg",
-];
+export const urlsMia = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-mia/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsLara = [
-  "/gallery/imagenes-evento-lara/imagen-1.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-2.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-3.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-4.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-5.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-6.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-7.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-8.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-9.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-10.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-11.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-12.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-13.jpeg",
-  "/gallery/imagenes-evento-lara/imagen-14.jpeg",
-];
+export const urlsLara = Object.values(
+  import.meta.glob("/public/gallery/imagenes-evento-lara/*.{jpg,jpeg,png}", {
+    eager: true,
+    as: "url",
+  })
+);
 
-export const urlsMichelin = [
-  "/gallery/imagenes-evento-michelin/imagen-1.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-2.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-3.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-4.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-5.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-6.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-7.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-8.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-9.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-10.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-11.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-12.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-13.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-14.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-15.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-16.jpeg",
-  "/gallery/imagenes-evento-michelin/imagen-17.jpeg",
-];
+export const urlsMichelin = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-michelin/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsEstela = [
-  "/gallery/imagenes-evento-60-anos-de-estela/imagen-1.jpeg",
-  "/gallery/imagenes-evento-60-anos-de-estela/imagen-2.jpeg",
-  "/gallery/imagenes-evento-60-anos-de-estela/imagen-3.jpeg",
-  "/gallery/imagenes-evento-60-anos-de-estela/imagen-4.jpeg",
-  "/gallery/imagenes-evento-60-anos-de-estela/imagen-5.jpeg",
-];
+export const urlsEstela = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-60-anos-de-estela/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsEnergia = [
-  "/gallery/imagenes-evento-edes/imagen-1.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-2.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-3.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-4.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-5.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-6.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-7.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-8.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-9.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-10.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-11.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-12.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-13.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-14.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-15.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-16.jpeg",
-  "/gallery/imagenes-evento-edes/imagen-17.jpeg",
-];
+export const urlsEnergia = Object.values(
+  import.meta.glob("/public/gallery/imagenes-evento-edes/*.{jpg,jpeg,png}", {
+    eager: true,
+    as: "url",
+  })
+);
 
-export const urlsAbril = [
-  "/gallery/imagenes-evento-xv-de-abril/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-8.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-9.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-10.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-11.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-12.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-13.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-14.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-15.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-16.jpeg",
-  "/gallery/imagenes-evento-xv-de-abril/imagen-17.jpeg",
-];
+export const urlsAbril = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-abril/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsClubPesca = [
-  "/gallery/imagenes-evento-club-de-pesca-huanguelen/imagen-1.jpeg",
-  "/gallery/imagenes-evento-club-de-pesca-huanguelen/imagen-2.jpeg",
-  "/gallery/imagenes-evento-club-de-pesca-huanguelen/imagen-3.jpeg",
-  "/gallery/imagenes-evento-club-de-pesca-huanguelen/imagen-4.jpeg",
-];
+export const urlsClubPesca = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-club-de-pesca-huanguelen/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsCami = [
-  "/gallery/imagenes-evento-xv-de-cami/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-cami/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-cami/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-cami/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-cami/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-cami/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-cami/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-cami/imagen-8.jpeg",
-];
+export const urlsCami = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-cami/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsEmpresarialMA = [
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-1.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-2.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-3.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-4.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-5.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-6.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-7.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-8.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-9.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-10.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-11.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-12.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-13.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-14.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-15.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-16.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-17.jpeg",
-  "/gallery/imagenes-evento-evento-martin-alarcia/imagen-18.jpeg",
-];
+export const urlsEmpresarialMA = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-evento-martin-alarcia/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsColegioNacional = [
-  "/gallery/imagenes-evento-colegio-nacional/imagen-1.jpeg",
-  "/gallery/imagenes-evento-colegio-nacional/imagen-2.jpeg",
-  "/gallery/imagenes-evento-colegio-nacional/imagen-3.jpeg",
-  "/gallery/imagenes-evento-colegio-nacional/imagen-4.jpeg",
-  "/gallery/imagenes-evento-colegio-nacional/imagen-5.jpeg",
-  "/gallery/imagenes-evento-colegio-nacional/imagen-6.jpeg",
-  "/gallery/imagenes-evento-colegio-nacional/imagen-7.jpeg",
-  "/gallery/imagenes-evento-colegio-nacional/imagen-8.jpeg",
-  "/gallery/imagenes-evento-colegio-nacional/imagen-9.jpeg",
-];
+export const urlsColegioNacional = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-colegio-nacional/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsCatia = [
-  "/gallery/imagenes-evento-katia-fest/imagen-1.jpeg",
-  "/gallery/imagenes-evento-katia-fest/imagen-2.jpeg",
-  "/gallery/imagenes-evento-katia-fest/imagen-3.jpeg",
-  "/gallery/imagenes-evento-katia-fest/imagen-4.jpeg",
-  "/gallery/imagenes-evento-katia-fest/imagen-5.jpeg",
-  "/gallery/imagenes-evento-katia-fest/imagen-6.jpeg",
-  "/gallery/imagenes-evento-katia-fest/imagen-7.jpeg",
-  "/gallery/imagenes-evento-katia-fest/imagen-8.jpeg",
-  "/gallery/imagenes-evento-katia-fest/imagen-9.jpeg",
-];
+export const urlsKatia = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-katia-fest/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsTami = [
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-8.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-9.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-10.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-11.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-12.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-13.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-14.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-15.jpeg",
-  "/gallery/imagenes-evento-xv-de-tamara/imagen-16.jpeg",
-];
+export const urlsTami = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-tamara/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsMiguel = [
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-1.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-2.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-3.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-4.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-5.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-6.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-7.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-8.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-9.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-10.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-11.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-12.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-13.jpeg",
-  "/gallery/imagenes-evento-70-anos-de-miguel/imagen-14.jpeg",
-];
+export const urlsMiguel = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-70-anos-de-miguel/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsValentina = [
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-8.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-9.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-10.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-11.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-12.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-13.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-14.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-15.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-16.jpeg",
-  "/gallery/imagenes-evento-xv-de-valentina/imagen-17.jpeg",
-];
+export const urlsValentina = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-valentina/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsPyM = [
-  "/gallery/imagenes-evento-pame-y-pablo/imagen-1.jpeg",
-  "/gallery/imagenes-evento-pame-y-pablo/imagen-2.jpeg",
-  "/gallery/imagenes-evento-pame-y-pablo/imagen-3.jpeg",
-  "/gallery/imagenes-evento-pame-y-pablo/imagen-4.jpeg",
-  "/gallery/imagenes-evento-pame-y-pablo/imagen-5.jpeg",
-  "/gallery/imagenes-evento-pame-y-pablo/imagen-6.jpeg",
-  "/gallery/imagenes-evento-pame-y-pablo/imagen-7.jpeg",
-  "/gallery/imagenes-evento-pame-y-pablo/imagen-8.jpeg",
-  "/gallery/imagenes-evento-pame-y-pablo/imagen-9.jpeg",
-  "/gallery/imagenes-evento-pame-y-pablo/imagen-10.jpeg",
-];
+export const urlsPyM = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-pame-y-pablo/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsSofia = [
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-8.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-9.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-10.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-11.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-12.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-13.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-14.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-15.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-16.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-17.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-18.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-19.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-20.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofia/imagen-21.jpeg",
-];
+export const urlsSofia = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-sofia/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsAlexyMili = [
-  "/gallery/imagenes-evento-alex-y-mili/imagen-1.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-2.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-3.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-4.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-5.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-6.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-7.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-8.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-9.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-10.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-11.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-12.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-13.jpeg",
-  "/gallery/imagenes-evento-alex-y-mili/imagen-14.jpeg",
-];
+export const urlsAlexyMili = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-alex-y-mili/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsVaneyFran = [
-  "/gallery/imagenes-evento-vane-y-fran/imagen-1.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-2.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-3.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-4.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-5.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-6.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-7.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-8.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-9.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-10.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-11.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-12.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-13.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-14.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-15.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-16.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-17.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-18.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-19.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-20.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-21.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-22.jpeg",
-  "/gallery/imagenes-evento-vane-y-fran/imagen-23.jpeg",
-];
+export const urlsVaneyFran = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-vane-y-fran/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsSole = [
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-1.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-2.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-3.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-4.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-5.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-6.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-7.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-8.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-9.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-10.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-11.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-12.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-13.jpeg",
-  "/gallery/imagenes-evento-40-anos-de-soledad-torre/imagen-14.jpeg",
-];
+export const urlsSole = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-40-anos-de-soledad-torre/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsMoni = [
-  "/gallery/imagenes-evento-monica/imagen-1.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-2.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-3.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-4.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-5.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-6.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-7.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-8.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-9.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-10.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-11.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-12.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-13.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-14.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-15.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-16.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-17.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-18.jpeg",
-  "/gallery/imagenes-evento-monica/imagen-19.jpeg",
-];
+export const urlsMoni = Object.values(
+  import.meta.glob("/public/gallery/imagenes-evento-monica/*.{jpg,jpeg,png}", {
+    eager: true,
+    as: "url",
+  })
+);
 
-export const urlsPaz = [
-  "/gallery/imagenes-evento-xv-de-paz/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-8.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-9.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-10.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-11.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-12.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-13.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-14.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-15.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-16.jpeg",
-  "/gallery/imagenes-evento-xv-de-paz/imagen-17.jpeg",
-];
+export const urlsPaz = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-paz/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsSofiPlacente = [
-  "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-1.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-2.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-3.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-4.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-5.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-6.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-7.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-8.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-9.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-10.jpeg",
-  "/gallery/imagenes-evento-xv-de-sofi-placente/imagen-11.jpeg",
-];
+export const urlsSofiPlacente = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-xv-de-sofi-placente/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsDagnaJoaquin = [
-  "/gallery/imagenes-evento-dagna-joaquin/imagen-1.jpeg",
-  "/gallery/imagenes-evento-dagna-joaquin/imagen-2.jpeg",
-  "/gallery/imagenes-evento-dagna-joaquin/imagen-3.jpeg",
-  "/gallery/imagenes-evento-dagna-joaquin/imagen-4.jpeg",
-  "/gallery/imagenes-evento-dagna-joaquin/imagen-5.jpeg",
-  "/gallery/imagenes-evento-dagna-joaquin/imagen-6.jpeg",
-  "/gallery/imagenes-evento-dagna-joaquin/imagen-7.jpeg",
-  "/gallery/imagenes-evento-dagna-joaquin/imagen-8.jpeg",
-  "/gallery/imagenes-evento-dagna-joaquin/imagen-9.jpeg",
-];
+export const urlsDagnaJoaquin = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-dagna-joaquin/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsSindicatoLuzFuerza = [
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-1.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-2.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-3.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-4.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-5.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-6.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-7.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-8.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-9.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-10.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-11.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-12.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-13.jpeg",
-  "/gallery/imagenes-evento-sindicato-luz-fuerza/imagen-14.jpeg",
-];
+export const urlsSindicatoLuzFuerza = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-sindicato-luz-fuerza/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsTukerIriarte = [
-  "/gallery/imagenes-evento-tuker-iriarte/imagen-1.jpeg",
-  "/gallery/imagenes-evento-tuker-iriarte/imagen-2.jpeg",
-  "/gallery/imagenes-evento-tuker-iriarte/imagen-3.jpeg",
-  "/gallery/imagenes-evento-tuker-iriarte/imagen-4.jpeg",
-  "/gallery/imagenes-evento-tuker-iriarte/imagen-5.jpeg",
-  "/gallery/imagenes-evento-tuker-iriarte/imagen-6.jpeg",
-  "/gallery/imagenes-evento-tuker-iriarte/imagen-7.jpeg",
-  "/gallery/imagenes-evento-tuker-iriarte/imagen-8.jpeg",
-  "/gallery/imagenes-evento-tuker-iriarte/imagen-9.jpeg",
-  "/gallery/imagenes-evento-tuker-iriarte/imagen-10.jpeg",
-];
+export const urlsTukerIriarte = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-tuker-iriarte/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
 
-export const urlsAymiHubert = [
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-1.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-2.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-3.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-4.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-5.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-6.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-7.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-8.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-9.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-10.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-11.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-12.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-13.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-14.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-15.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-16.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-17.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-18.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-19.jpeg",
-  "/gallery/imagenes-evento-15-aymi-hubert/imagen-20.jpeg",
-];
+export const urlsAymiHubert = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-evento-15-aymi-hubert/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
+
+export const urlsIsabelaLinder = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-15-isabela-linder/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
+
+export const urlsDamianYAnai = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-casamiento-damian-y-anai/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
+
+export const urlsJazminSchefer = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-15-jazmin-schefer/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);
+
+export const urlsOliviaFerrandi = Object.values(
+  import.meta.glob(
+    "/public/gallery/imagenes-15-olivia-ferrandi/*.{jpg,jpeg,png}",
+    {
+      eager: true,
+      as: "url",
+    }
+  )
+);

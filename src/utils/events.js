@@ -3,7 +3,7 @@ import {
   urlsJazmin,
   urlsSyM,
   urlsDelfina,
-  urlsComplejoQuinta,
+  urlsMariaPaz,
   urlsMia,
   urlsBianca,
   urlsLara,
@@ -15,7 +15,7 @@ import {
   urlsCami,
   urlsEmpresarialMA,
   urlsColegioNacional,
-  urlsCatia,
+  urlsKatia,
   urlsTami,
   urlsMiguel,
   urlsValentina,
@@ -31,6 +31,10 @@ import {
   urlsSindicatoLuzFuerza,
   urlsTukerIriarte,
   urlsAymiHubert,
+  urlsIsabelaLinder,
+  urlsDamianYAnai,
+  urlsJazminSchefer,
+  urlsOliviaFerrandi,
 } from "./images";
 
 export const events = [
@@ -40,7 +44,7 @@ export const events = [
     title: "Ingrid & Leo Sociedad Rural",
     description: "Fiesta de casamiento",
     type: "Casamientos",
-    date: "23/04/2025",
+    date: "04/25",
   },
   {
     image: urlsJazmin[0],
@@ -48,7 +52,7 @@ export const events = [
     title: "XV de Jazmín",
     description: "Fiesta de 15 años",
     type: "Cumpleaños de 15",
-    date: "06/04/2025",
+    date: "04/25",
   },
   {
     image: urlsSyM[0],
@@ -56,7 +60,7 @@ export const events = [
     title: "Santi & Mica",
     description: "Fiesta de casamiento",
     type: "Casamientos",
-    date: "29/03/2025",
+    date: "03/25",
   },
   {
     image: urlsDelfina[0],
@@ -64,15 +68,15 @@ export const events = [
     title: "XV de Delfina",
     description: "Fiesta de 15 años",
     type: "Cumpleaños de 15",
-    date: "06/04/2025",
+    date: "04/25",
   },
   {
-    image: urlsComplejoQuinta[0],
-    images: urlsComplejoQuinta,
+    image: urlsMariaPaz[0],
+    images: urlsMariaPaz,
     title: "XV de María Paz",
     description: "Fiesta de 15 años en Complejo Quinta",
     type: "Cumpleaños de 15",
-    date: "15/03/2025",
+    date: "03/25",
   },
   {
     image: urlsMia[0],
@@ -80,7 +84,7 @@ export const events = [
     title: "XV de Mía",
     description: "Fiesta de 15 años",
     type: "Cumpleaños de 15",
-    date: "09/03/2025",
+    date: "03/25",
   },
   {
     image: urlsBianca[0],
@@ -88,7 +92,7 @@ export const events = [
     title: "XV de Bianca",
     description: "Fiesta de 15 años",
     type: "Cumpleaños de 15",
-    date: "09/03/2025",
+    date: "03/25",
   },
   {
     image: urlsEstela[0],
@@ -96,7 +100,7 @@ export const events = [
     title: "60 años de Estela",
     description: "Cumpleaños familiar",
     type: "Cumpleaños",
-    date: "21/01/2025",
+    date: "01/25",
   },
   {
     image: urlsMichelin[0],
@@ -104,7 +108,7 @@ export const events = [
     title: "Michelin",
     description: "Evento corporativo",
     type: "Empresariales",
-    date: "21/01/2025",
+    date: "01/25",
   },
   {
     image: urlsLara[0],
@@ -112,7 +116,7 @@ export const events = [
     title: "Lara",
     description: "Noche mágica Lara",
     type: "Eventos",
-    date: "09/03/2025",
+    date: "03/25",
   },
   {
     image: urlsEnergia[0],
@@ -121,7 +125,7 @@ export const events = [
     description:
       "Evento corporativo de empresa distribuidora de la energía EDES",
     type: "Empresariales",
-    date: "21/01/2025",
+    date: "01/25",
   },
   {
     image: urlsAbril[0],
@@ -129,7 +133,7 @@ export const events = [
     title: "XV de Abril",
     description: "Fiesta de 15 años",
     type: "Cumpleaños de 15",
-    date: "20/01/2025",
+    date: "01/25",
   },
   {
     image: urlsClubPesca[0],
@@ -137,7 +141,7 @@ export const events = [
     title: "Club de Pesca Huanguelén",
     description: "Fiesta social",
     type: "Eventos",
-    date: "20/01/2025",
+    date: "01/25",
   },
   {
     image: urlsCami[0],
@@ -145,7 +149,7 @@ export const events = [
     title: "XV de Cami",
     description: "Fiesta de 15 años",
     type: "Cumpleaños de 15",
-    date: "09/01/2025",
+    date: "01/25",
   },
   {
     image: urlsEmpresarialMA[0],
@@ -153,7 +157,7 @@ export const events = [
     title: "Evento Martín Alarcia",
     description: "Evento corporativo",
     type: "Empresariales",
-    date: "09/01/2025",
+    date: "01/25",
   },
   {
     image: urlsColegioNacional[0],
@@ -161,15 +165,15 @@ export const events = [
     title: "Colegio Nacional",
     description: "Egreso del Colegio Nacional promo 2024",
     type: "Escolares",
-    date: "22/12/2024",
+    date: "12/2024",
   },
   {
-    image: urlsCatia[0],
-    images: urlsCatia,
+    image: urlsKatia[0],
+    images: urlsKatia,
     title: "Katia Fest",
     description: "Noche mágica de Katia",
     type: "Eventos",
-    date: "21/10/2024",
+    date: "10/2024",
   },
   {
     image: urlsTami[0],
@@ -177,7 +181,7 @@ export const events = [
     title: "XV de Tamara",
     description: "Cumpleaños de 15 años",
     type: "Cumpleaños de 15",
-    date: "30/09/2024",
+    date: "09/2024",
   },
   {
     image: urlsMiguel[0],
@@ -185,7 +189,7 @@ export const events = [
     title: "70 años de Miguel",
     description: "Cumpleaños de 70 años",
     type: "Cumpleaños",
-    date: "27/08/2024",
+    date: "08/2024",
   },
   {
     image: urlsValentina[0],
@@ -193,7 +197,7 @@ export const events = [
     title: "XV de Valentina",
     description: "Cumpleaños de 15 años",
     type: "Cumpleaños de 15",
-    date: "01/08/2024",
+    date: "08/2024",
   },
   {
     image: urlsPyM[0],
@@ -201,7 +205,7 @@ export const events = [
     title: "Pame & Pablo",
     description: "Casamiento de Pame y Pablo",
     type: "Casamientos",
-    date: "07/07/2024",
+    date: "07/2024",
   },
   {
     image: urlsSofia[0],
@@ -209,7 +213,7 @@ export const events = [
     title: "XV de Sofia",
     description: "Cumpleaños de 15 años",
     type: "Cumpleaños de 15",
-    date: "26/06/2024",
+    date: "06/2024",
   },
   {
     image: urlsAlexyMili[0],
@@ -217,7 +221,7 @@ export const events = [
     title: "Alex & Mili",
     description: "Casamiento de Alex y Mili",
     type: "Casamientos",
-    date: "12/03/2023",
+    date: "03/2023",
   },
   {
     image: urlsVaneyFran[0],
@@ -225,7 +229,7 @@ export const events = [
     title: "Vane & Fran",
     description: "Casamiento de Vane y Fran",
     type: "Casamientos",
-    date: "08/02/2023",
+    date: "02/2023",
   },
   {
     image: urlsSole[0],
@@ -233,7 +237,7 @@ export const events = [
     title: "40 años de Soledad Torre",
     description: "Cumpleaños de 40 años",
     type: "Cumpleaños",
-    date: "18/10/2022",
+    date: "10/2022",
   },
   {
     image: urlsMoni[0],
@@ -241,7 +245,7 @@ export const events = [
     title: "Monica",
     description: "Cumpleaños de Monica",
     type: "Cumpleaños",
-    date: "23/05/2022",
+    date: "05/2022",
   },
   {
     image: urlsPaz[0],
@@ -249,7 +253,7 @@ export const events = [
     title: "XV de Paz",
     description: "Cumpleaños de 15",
     type: "Cumpleaños de 15",
-    date: "13/02/2023",
+    date: "02/2023",
   },
   {
     image: urlsSofiPlacente[0],
@@ -257,7 +261,7 @@ export const events = [
     title: "XV de Sofi Placente",
     description: "Cumpleaños de 15 en Salon Dorado",
     type: "Cumpleaños de 15",
-    date: "24/05/2025",
+    date: "05/25",
   },
   {
     image: urlsDagnaJoaquin[0],
@@ -265,7 +269,7 @@ export const events = [
     title: "Dagna & Joaquín",
     description: "Casamiento en Complejo la Quinta",
     type: "Casamientos",
-    date: "09/02/2025",
+    date: "02/25",
   },
   {
     image: urlsSindicatoLuzFuerza[0],
@@ -273,7 +277,7 @@ export const events = [
     title: "Sindicato Luz y Fuerza",
     description: "Evento en el salon Magnolia Eventos",
     type: "Eventos",
-    date: "19/07/2025",
+    date: "07/25",
   },
   {
     image: urlsTukerIriarte[0],
@@ -281,7 +285,7 @@ export const events = [
     title: "Tuker Iriarte",
     description: "Evento empresarial en campo La pista",
     type: "Empresariales",
-    date: "18/07/2025",
+    date: "07/25",
   },
   {
     image: urlsAymiHubert[0],
@@ -289,7 +293,39 @@ export const events = [
     title: "XV de Aymi Hubert",
     description: "Cumpleaños de 15 en Salon Magnolia Eventos",
     type: "Cumpleaños de 15",
-    date: "12/07/2025",
+    date: "07/25",
+  },
+  {
+    image: urlsIsabelaLinder[0],
+    images: urlsIsabelaLinder,
+    title: "XV de Isabela Linder",
+    description: "Cumpleaños de 15 en Salon Magnolia Eventos",
+    type: "Cumpleaños de 15",
+    date: "09/25",
+  },
+  {
+    image: urlsDamianYAnai[0],
+    images: urlsDamianYAnai,
+    title: "Casamiento de Damian y Anahí",
+    description: "Establecimiento Rural de la familia",
+    type: "Casamientos",
+    date: "09/25",
+  },
+  {
+    image: urlsJazminSchefer[0],
+    images: urlsJazminSchefer,
+    title: "XV de Jazmin Schefer",
+    description: "Cumpleaños de 15 en salon Magnolia Eventos",
+    type: "Cumpleaños de 15",
+    date: "09/25",
+  },
+  {
+    image: urlsOliviaFerrandi[0],
+    images: urlsOliviaFerrandi,
+    title: "XV de Olivia Ferrandi",
+    description: "Cumpleaños de 15 en salon Magnolia Eventos",
+    type: "Cumpleaños de 15",
+    date: "09/25",
   },
 ];
 
