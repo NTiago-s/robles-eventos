@@ -21,12 +21,34 @@ const { title, description } = Astro.props;
     />
     <meta name="author" content="Los Robles" />
 
+    <meta property="og:url" content="https://los-robles-eventos.com" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="Los Robles Eventos" />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/favicon.ico" />
-    <meta property="og:image:alt" content="Los Robles" />
+    <meta
+      property="og:image"
+      content="https://los-robles-eventos.com/favicon.ico"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="los-robles-eventos.com" />
+    <meta property="twitter:url" content="https://los-robles-eventos.com" />
+    <meta name="twitter:title" content="Los Robles Eventos" />
+    <meta name="twitter:description" content={description} />
+    <meta
+      name="twitter:image"
+      content="https://los-robles-eventos.com/favicon.ico"
+    />
 
     <link rel="canonical" href="https://los-robles-eventos.com/" />
+    <link rel="preload" as="image" href="/madera-hero.webp" type="image/webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>{title}</title>
     <ClientRouter />
