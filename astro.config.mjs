@@ -9,6 +9,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://codeluxe.vercel.app",
+  site: "https://los-robles-eventos.com",
   integrations: [sitemap()],
 });
